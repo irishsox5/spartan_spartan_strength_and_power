@@ -1,0 +1,52 @@
+<!--=== Content Part ===-->
+<div class="container content">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+      <form class="reg-page">
+        <div class="reg-header">
+          <h2>Login to your account</h2>
+          <p>Don't Have Account? Click <%= link_to 'Sign Up', new_user_registration_url,:class=> "color-green" %> to register.</p>
+        </div>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+        <div class="input-group margin-bottom-20">
+          <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+          <%= f.email_field :email, autofocus: true, :class=>"form-control", :placeholder => "Email" %>
+        </div>
+
+        <div class="input-group margin-bottom-20">
+          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+          <%= f.password_field :password, autocomplete: "off", :class=>"form-control",:placeholder=> "Password" %>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 checkbox">
+            <label>
+              <% if devise_mapping.rememberable? -%>
+              <%= f.check_box :remember_me %>
+              <p>Always stay signed in</p>
+            </label>
+            <% end -%>
+          </div>
+        </div>
+
+          <div class="col-md-6">
+            <%= f.submit "Log in", :class=> "btn-u btn-block" %>
+          </div>
+        </div>
+
+        <hr>
+
+        <h4>Forget your Password ?</h4>
+        <p>no worries, <%= link_to 'Click Here', new_user_password_url, :class=> "color-green" %> to reset your password.</p>
+      </form>
+    </div>
+  </div><!--/row-->
+   <% end %>
+</div><!--/container-->
+<!--=== End Content Part ===-->
+
+
+
+
