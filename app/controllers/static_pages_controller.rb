@@ -10,4 +10,8 @@ class StaticPagesController < ApplicationController
   def faqs
 
   end
+
+  def facilities
+
+  end
 end
