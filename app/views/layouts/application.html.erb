@@ -31,6 +31,17 @@
  <link rel="stylesheet" href="assets/plugins/animate.css">
  <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
  <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+ <link rel="stylesheet" href="assets/plugins/animate.css">
+ <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+ <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+ <link rel="stylesheet" href="assets/plugins/parallax-slider/css/parallax-slider.css">
+ <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+ <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+ <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+    <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+
+<!-- CSS Page Style -->
+    <link rel="stylesheet" href="assets/css/pages/page_contact.css">
 
  <!-- CSS Theme -->
  <link rel="stylesheet" href="assets/css/theme-colors/blue.css"/>
@@ -46,12 +57,18 @@
  <!-- JS Implementing Plugins -->
  <script src="assets/plugins/back-to-top.js"></script>
  <script src="assets/plugins/smoothScroll.js"></script>
+ <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+ <script type="text/javascript" src="assets/plugins/gmap/gmap.js"></script>
 
  <!-- JS Customization -->
  <script type="text/javascript" src="assets/js/custom.js"></script>
 
  <!-- JS Page Level -->
  <script src="assets/js/app.js"></script>
+ <script type="text/javascript" src="assets/js/forms/login.js"></script>
+ <script type="text/javascript" src="assets/js/forms/contact.js"></script>
+ <script type="text/javascript" src="assets/js/pages/page_contacts.js"></script>
+ <script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
 
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>
@@ -62,13 +79,16 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+
   </head>
   <body>
     <div class="wrapper">
      <%= render "layouts/header" %>
 
+     <%= render 'layouts/messages' %>
      <%= yield %>
-
+     <div class="container">
+     </div>
      <%= render "layouts/footer" %>
    </div><!--/wrapper-->
 

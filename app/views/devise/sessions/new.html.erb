@@ -1,3 +1,11 @@
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+  <div class="container">
+    <h1 class="pull-left">Login</h1>
+  </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
 <!--=== Content Part ===-->
 <div class="container content">
   <div class="row">
@@ -5,10 +13,11 @@
       <form class="reg-page">
         <div class="reg-header">
           <h2>Login to your account</h2>
-          <p>Don't Have Account? Click <%= link_to 'Sign Up', new_user_registration_url,:class=> "color-green" %> to register.</p>
+          <p>Don't Have Account? Click <%= link_to 'Sign Up', sign_up_url,:class=> "color-green" %> to register.</p>
         </div>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
         <div class="input-group margin-bottom-20">
           <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
@@ -20,33 +29,30 @@
           <%= f.password_field :password, autocomplete: "off", :class=>"form-control",:placeholder=> "Password" %>
         </div>
 
+        <% if devise_mapping.rememberable? -%>
         <div class="row">
           <div class="col-md-6 checkbox">
             <label>
-              <% if devise_mapping.rememberable? -%>
               <%= f.check_box :remember_me %>
               <p>Always stay signed in</p>
             </label>
             <% end -%>
           </div>
-        </div>
+
 
           <div class="col-md-6">
-            <%= f.submit "Log in", :class=> "btn-u btn-block" %>
+            <%= f.submit "Log in", :class=> "btn-u pull-right" %>
           </div>
         </div>
 
         <hr>
 
         <h4>Forget your Password ?</h4>
-        <p>no worries, <%= link_to 'Click Here', new_user_password_url, :class=> "color-green" %> to reset your password.</p>
+        <p>No worries, <%= link_to 'Click Here', new_password_url, :class=> "color-green" %> to reset your password.</p>
+        <% end %>
       </form>
     </div>
   </div><!--/row-->
-   <% end %>
 </div><!--/container-->
 <!--=== End Content Part ===-->
-
-
-
 

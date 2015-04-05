@@ -14,4 +14,8 @@ class StaticPagesController < ApplicationController
   def facilities
 
   end
+
+  def trials
+
+  end
 end

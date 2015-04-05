@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
    devise_for :users, :controllers => { registrations: 'registrations' }
    devise_scope :user do
+     get "/login" => "devise/sessions#new"
+     get "/sign_up" => "devise/registrations#new"
+     get "/new_password" => "devise/passwords#new"
+
     authenticated :user do
       root 'schedules#index', as: :authenticated_root
     end
@@ -15,6 +19,7 @@ Rails.application.routes.draw do
   get '/coaches' => "static_pages#about",:as => "about_us"
   get '/facilities'=>"static_pages#facilities", :as =>"facilities"
   get '/faqs' => "static_pages#faqs", :as => 'faqs'
+  get '/free_trial'=>"static_pages#trials", :as => 'trials'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

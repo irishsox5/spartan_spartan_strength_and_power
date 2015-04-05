@@ -23,9 +23,9 @@
                 </ul>
               </li>
               <li class="topbar-devider"></li>
-              <li><%= link_to "Login", new_user_session_url%></li>
+              <li><%= link_to "Login", login_url%></li>
               <li class="topbar-devider"></li>
-              <li><%= link_to "Register", new_user_registration_url %></li>
+              <li><%= link_to "Register", sign_up_url %></li>
             </ul>
           </div>
           <!-- End Topbar -->
@@ -137,7 +137,7 @@
                     </ul>
                   </li>
                   <li class="dropdown-submenu">
-                    <a href="javascript:void(0);">Grid Text Boxed</a>
+                    <a href="javascript:void(0);">Blog</a>
                     <ul class="dropdown-menu">
                       <li><a href="portfolio_2_columns_grid_text.html">2 Columns</a></li>
                       <li><a href="portfolio_3_columns_grid_text.html">3 Columns</a></li>
@@ -179,33 +179,8 @@
               <!-- End Portfolio -->
 
               <!-- Features -->
-              <li class="dropdown">
-                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                  Free Trial
-                </a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-submenu">
-                    <a href="javascript:void(0);">Headers</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="feature_header_default.html">Header Default</a></li>
-                      <li><a href="feature_header_v1.html">Header v1</a></li>
-                      <li><a href="feature_header_v2.html">Header v2</a></li>
-                      <li><a href="feature_header_v3.html">Header v3</a></li>
-                      <li><a href="feature_header_v4.html">Header v4</a></li>
-                      <li><a href="feature_header_v5.html">Header v5</a></li>
-                      <li><a href="feature_header_v6_transparent.html">Header v6 Transparent</a></li>
-                      <li><a href="feature_header_v6_semi_dark_transparent.html">Header v6 Dark Transparent</a></li>
-                      <li><a href="feature_header_v6_semi_white_transparent.html">Header v6 White Transparent</a></li>
-                      <li><a href="feature_header_v6_border_bottom.html">Header v6 Border Bottom</a></li>
-                      <li><a href="feature_header_v6_classic_dark.html">Header v6 Classic Dark</a></li>
-                      <li><a href="feature_header_v6_classic_white.html">Header v6 Classic White</a></li>
-                      <li><a href="feature_header_v6_dark_dropdown.html">Header v6 Dark Dropdown</a></li>
-                      <li><a href="feature_header_v6_dark_scroll.html">Header v6 Dark on Scroll</a></li>
-                      <li><a href="feature_header_v6_dark_search.html">Header v6 Dark Search</a></li>
-                      <li><a href="feature_header_v6_dark_res_nav.html">Header v6 Dark in Responsive</a></li>
-                    </ul>
-                  </li>
-                </ul>
+              <li>
+                <%= link_to "Free Trial", trials_url %>
               </li>
               <!-- End Features -->
 
