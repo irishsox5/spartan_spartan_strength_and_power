@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   get '/coaches' => "static_pages#about",:as => "about_us"
   get '/facilities'=>"static_pages#facilities", :as =>"facilities"
   get '/faqs' => "static_pages#faqs", :as => 'faqs'
-  get '/free_trial'=>"static_pages#trials", :as => 'trials'
+  get '/free_trial'=>"contacts#new", :as => 'trials'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

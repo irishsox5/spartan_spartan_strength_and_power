@@ -15,7 +15,4 @@ class StaticPagesController < ApplicationController
 
   end
 
-  def trials
-
-  end
 end
