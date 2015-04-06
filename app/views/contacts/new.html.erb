@@ -1,4 +1,3 @@
-<!--=== Breadcrumbs ===-->
 <div class="breadcrumbs">
     <div class="container">
         <h1 class="pull-left">Free Trial</h1>
@@ -18,13 +17,15 @@
         <div class="headline"><h2>Contact Form</h2></div>
         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit landitiis.</p><br />
 
-        <form action="assets/php/sky-forms-pro/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form contact-style">
+        <form action="/contacts" method="post" id="sky-form3" class="sky-form contact-style">
             <fieldset class="no-padding">
+             <%= form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+
                 <label>Name <span class="color-red">*</span></label>
                 <div class="row sky-space-20">
                     <div class="col-md-7 col-md-offset-0">
                         <div>
-                            <input type="text" name="name" id="name" class="form-control">
+                            <%= f.text_field :name, :required => true, :class => 'form-control' %>
                         </div>
                     </div>
                 </div>
@@ -33,7 +34,7 @@
                 <div class="row sky-space-20">
                     <div class="col-md-7 col-md-offset-0">
                         <div>
-                            <input type="text" name="email" id="email" class="form-control">
+                            <%= f.email_field :email, :required => true, :class=> "form-control" %>
                         </div>
                     </div>
                 </div>
@@ -42,18 +43,19 @@
                 <div class="row sky-space-20">
                     <div class="col-md-11 col-md-offset-0">
                         <div>
-                            <textarea rows="8" name="message" id="message" class="form-control"></textarea>
+                        <%= f.text_area :message, :as => :text, :required => true, :rows => 8, :class => 'form-control'%>
                         </div>
                     </div>
                 </div>
 
-                <p><button type="submit" class="btn-u">Send Message</button></p>
+                <p><%= f.submit "Send Message", :class=> "btn-u" %></p>
             </fieldset>
 
             <div class="message">
                 <i class="rounded-x fa fa-check"></i>
                 <p>Your message was successfully sent!</p>
             </div>
+            <% end %>
         </form>
     </div><!--/col-md-9-->
 
@@ -105,8 +107,6 @@
 <script type="text/javascript" src="assets/js/custom.js"></script>
 <!-- JS Page Level -->
 <script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/forms/login.js"></script>
-<script type="text/javascript" src="assets/js/forms/contact.js"></script>
 <script type="text/javascript" src="assets/js/pages/page_contacts.js"></script>
 <script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
 <script type="text/javascript">
@@ -118,3 +118,7 @@
         OwlCarousel.initOwlCarousel();
     });
 </script>
+
+
+
+
