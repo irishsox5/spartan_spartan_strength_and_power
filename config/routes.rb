@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :blogs
+
    devise_for :users, :controllers => { registrations: 'registrations' }
    devise_scope :user do
      get "/login" => "devise/sessions#new"
