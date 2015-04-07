@@ -6,7 +6,7 @@ Rails.application.routes.draw do
      get "/new_password" => "devise/passwords#new"
 
     authenticated :user do
-      root 'schedules#index', as: :authenticated_root
+      root 'static_pages#programs', as: :authenticated_root
     end
 
     unauthenticated do
