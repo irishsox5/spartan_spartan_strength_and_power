@@ -1,38 +1,56 @@
-<!-- Responsive panel example-->
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+  <div class="container">
+    <h1 class="pull-left">Spartan Strength And Power Blog</h1>
+  </div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
 
-<div class="row">
-  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Blog #<%= @blog.id %></h3>
+<!--=== Blog Posts ===-->
+<div class="bg-color-light">
+  <div class="container content-sm">
+    <!-- Blog Posts -->
+    <div class="news-v3 margin-bottom-60">
+      <img class="img-responsive full-width" src="/assets/img/main/img12.jpg" alt="">
+      <div class="btn-group btn-group-justified">
+        <%= link_to icon('chevron-left'), blogs_path, class: "btn btn-primary" %>
+
+        <%= link_to icon('edit'), edit_blog_path(@blog), class: "btn btn-warning" %>
+
+        <%= link_to icon('trash-o'), @blog, method: :delete, data: { confirm: "Do you really want to delete this blog?" }, class: "btn btn-danger" %>
       </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-md-12">
-            <dl class="dl-horizontal">
-              <dt>Title</dt>
-              <dd><%= @blog.title %></dd>
-
-              <dt>Author</dt>
-              <dd><%= @blog.author %></dd>
-
-              <dt>Content</dt>
-              <dd><%= @blog.content %></dd>
-
-            </dl>
-            <div class="btn-group btn-group-justified">
-              <%= link_to icon('chevron-left'), blogs_path, class: "btn btn-primary" %>
-
-              <%= link_to icon('edit'), edit_blog_path(@blog), class: "btn btn-warning" %>
-
-              <%= link_to icon('trash-o'), @blog, method: :delete, data: { confirm: "Do you really want to delete this blog?" }, class: "btn btn-danger" %>
-            </div>
-          </div>
-        </div>
+      <div class="news-v3-in">
+        <ul class="list-inline posted-info">
+          <li>By <%= @blog.author %></li>
+          <li><%= @blog.created_at.strftime("%B-%m-%Y") %></li>
+        </ul>
+        <h2><a href="#"><%= @blog.title %></a></h2>
+        <p><%= @blog.content %></p>
+        <!-- <ul class="post-shares">
+          <li>
+            <a href="#">
+              <i class="rounded-x icon-speech"></i>
+              <span>26</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="rounded-x icon-share"></i>
+              <span>98</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="rounded-x icon-heart"></i>
+              <span>30</span>
+            </a>
+          </li>
+        </ul> -->
       </div>
     </div>
+    <!-- End Blog Posts -->
   </div>
 </div>
+<!--=== End Blog Posts ===-->
 
-<!-- End responsive panel example -->
 

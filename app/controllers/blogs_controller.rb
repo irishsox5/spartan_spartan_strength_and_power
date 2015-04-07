@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
-    @recentposts = Blog.order("created_at DESC").limit(3)
+    @otherposts = Blog.all.limit(3).shuffle
   end
 
   # GET /blogs/1
