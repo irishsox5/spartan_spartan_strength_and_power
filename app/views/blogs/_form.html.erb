@@ -13,15 +13,22 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => 'form-control' %>
   </div>
+
   <div class="field">
     <%= f.label :author %><br>
-    <%= f.text_field :author %>
+    <%= f.text_field :author, :class => 'form-control' %>
   </div>
+
+  <div class="field">
+    <%= f.label :photos %><br>
+    <%= f.file_field :photo %>
+  </div>
+
   <div class="field">
     <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.text_area :content,:rows => 8, :class => 'form-control' %>
   </div>
   <div class="actions">
     <%= f.submit %>

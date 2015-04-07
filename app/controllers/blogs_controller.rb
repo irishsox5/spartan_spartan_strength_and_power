@@ -1,10 +1,12 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate, :except => [ :index, :show ]
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
+    @recentposts = Blog.order("created_at DESC").limit(3)
   end
 
   # GET /blogs/1
@@ -69,6 +71,13 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :author, :content)
+      params.require(:blog).permit(:title, :author, :content, :photo)
     end
+
+      private
+    def authenticate
+    authenticate_or_request_with_http_basic do |name, password|
+      name == "admin" && password == "secret"
+    end
+  end
 end
