@@ -17,6 +17,7 @@ gem 'jquery-turbolinks'
 gem 'mail_form'
 
 gem 'carrierwave'
+gem "rmagick"
 
 gem 'kaminari'
 

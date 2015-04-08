@@ -7,6 +7,7 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
     @otherposts = Blog.all.limit(3).shuffle
+    @randpic=Blog.all.limit(8).shuffle
   end
 
   # GET /blogs/1

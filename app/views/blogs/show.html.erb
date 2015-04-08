@@ -12,6 +12,7 @@
     <!-- Blog Posts -->
     <div class="news-v3 margin-bottom-60">
       <img class="img-responsive full-width" src="/assets/img/main/img12.jpg" alt="">
+      <%= image_tag @blog.photo_url.to_s %>
       <div class="btn-group btn-group-justified">
         <%= link_to icon('chevron-left'), blogs_path, class: "btn btn-primary" %>
 
