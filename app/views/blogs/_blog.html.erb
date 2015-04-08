@@ -19,7 +19,7 @@
     </ul>
   </div>
   <div class="blog-img">
-    <img class="img-responsive" src="/assets/img/main/img18.jpg" alt="">
+    <%= image_tag blog.photo_url.to_s,:class=>"img-responsive" %>
   </div>
   <p><%= truncate(blog.content, :length => 150) %></p>
   <p> <%= link_to blog, :class=> "btn-u btn-u-small" , id: "show" do %>

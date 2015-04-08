@@ -24,12 +24,14 @@
   <!-- Other Posts (Random) -->
   <div class="posts margin-bottom-40">
     <div class="headline headline-md"><h2>Other Posts</h2></div>
-    <% @otherposts.each do |post| %>
+    <% @otherposts.each do |blog| %>
     <dl class="dl-horizontal">
-      <dt><a href="#"><img src="/assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
+      <%= link_to blog_url(blog) do %>
+      <dt><%= image_tag blog.photo_url(:thumb).to_s, :class=> "hover-effect" %></dt>
       <dd>
-        <p><strong><%= post.title.titleize %></strong></p>
-         <p><%= truncate(post.content, :length => 64)%></p>
+        <p><strong><%= blog.title.titleize %></strong></p>
+      <% end %>
+         <p><%= truncate(blog.content, :length => 64)%></p>
       </dd>
     </dl>
     <% end %>
