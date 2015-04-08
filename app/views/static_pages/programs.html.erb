@@ -3,7 +3,11 @@
     <div class="container">
         <h1 class="pull-left">The Spartan Programs</h1>
         <ul class="pull-right breadcrumb">
-        <li><%= link_to "Register And Login To Pay and Join!", sign_up_url %></li>
+            <% if current_user.present? %>
+            <li>Pick A Program That Best Fits Your Needs!</li>
+            <% else %>
+            <li><%= link_to "Register And Login To Pay and Join!", sign_up_url %></li>
+            <% end %>
         </ul>
     </div>
 </div><!--/breadcrumbs-->
@@ -11,90 +15,8 @@
 
 <!--=== Content Part ===-->
 <div class="container content">
-    <!-- Pricing Table-v6 -->
-    <div class="row margin-bottom-10 no-space-pricing-v6">
-        <div class="col-md-3 col-sm-6 col-xs-6 col-width-full">
-            <div class="pricing-table-v6">
-                <div class="service-block service-block-dark-blue">
-                    <i class="icon-custom icon-color-light rounded-x fa fa-user"></i>
-                    <h2 class="heading-md">Nabis Package</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus id elit mi egetine usce dapibus elit nondapibus</p>
-                    <h3><span>$</span>140<i> Per/Month</i></h3>
-                    <ul class="list-unstyled pricing-v4-content text-center">
-                        <li><span class="icon-user"></span> Users - 50</li>
-                        <li><span class="icon-drawer"></span> Disckspace - 500GB</li>
-                        <li><span class="icon-envelope-open"></span> Email Addresses - 900</li>
-                        <li><span class="icon-layers"></span> MySQL Databases</li>
-                        <li><span class="icon-wrench"></span> Customisable Toolbar</li>
-                    </ul>
-                    <% if current_user.present? %>
-                    <a href="#" class="btn-u btn-brd btn-u">Purchase Now</a>
-                    <%end %>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-6 col-width-full">
-            <div class="pricing-table-v6">
-                <div class="service-block service-block-red">
-                    <i class="icon-custom icon-color-light rounded-x icon-line icon-graduation"></i>
-                    <h2 class="heading-md">Nabis Package Plus</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus id elit mi egetine usce dapibus elit nondapibus</p>
-                    <h3><span>$</span>180<i> Per/Month</i></h3>
-                    <ul class="list-unstyled pricing-v4-content">
-                        <li><span class="icon-user"></span> Gym Membership</li>
-                        <li><span class="icon-drawer"></span> Disckspace - 500GB</li>
-                        <li><span class="icon-envelope-open"></span> Email Addresses - 900</li>
-                        <li><span class="icon-layers"></span> MySQL Databases</li>
-                        <li><span class="icon-wrench"></span> Customisable Toolbar</li>
-                    </ul>
-                    <% if current_user.present? %>
-                    <a href="#" class="btn-u btn-brd btn-u">Purchase Now</a>
-                    <%end %>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-6 col-width-full">
-            <div class="pricing-table-v6">
-                <div class="service-block service-block-dark">
-                    <i class="icon-custom icon-color-light rounded-x fa fa-users"></i>
-                    <h2 class="heading-md">Leonidas Package </h2>
-                    <p>Donec id elit non mi porta gravida at eget metus id elit mi egetine usce dapibus elit nondapibus</p>
-                    <h3><span>$</span>500<i></h3>
-                    <ul class="list-unstyled pricing-v4-content text-center">
-                        <li><span class="icon-user"></span> Users - 50</li>
-                        <li><span class="icon-drawer"></span> Disckspace - 500GB</li>
-                        <li><span class="icon-envelope-open"></span> Email Addresses - 900</li>
-                        <li><span class="icon-layers"></span> MySQL Databases</li>
-                        <li><span class="icon-wrench"></span> Customisable Toolbar</li>
-                    </ul>
-                    <% if current_user.present? %>
-                    <a href="#" class="btn-u btn-brd btn-u">Purchase Now</a>
-                    <%end %>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-6 col-width-full">
-            <div class="pricing-table-v6">
-                <div class="service-block service-block-u">
-                    <i class="icon-custom icon-color-light rounded-x icon-line icon-diamond"></i>
-                    <h2 class="heading-md">Leonidas Package Plus</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus id elit mi egetine usce dapibus elit nondapibus</p>
-                    <h3><span>$</span>650<i></h3>
-                    <ul class="list-unstyled pricing-v4-content text-center">
-                        <li><span class="icon-user"></span> Gym Membership </li>
-                        <li><span class="icon-drawer"></span> Disckspace - 500GB</li>
-                        <li><span class="icon-envelope-open"></span> Email Addresses - 900</li>
-                        <li><span class="icon-layers"></span> MySQL Databases</li>
-                        <li><span class="icon-wrench"></span> Customisable Toolbar</li>
-                    </ul>
-                    <% if current_user.present? %>
-                    <a href="#" class="btn-u btn-brd btn-u">Purchase Now</a>
-                    <%end %>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Pricing Table-v6 -->
+
+    <%= render "static_pages/programs" %>
 
 </div><!--/container-->
 <!--=== End Content Part ===-->
