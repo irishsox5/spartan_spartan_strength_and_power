@@ -21,20 +21,20 @@
   </ul>
   <!-- End Blog Tags -->
 
-  <!-- Recent Posts -->
+  <!-- Other Posts (Random) -->
   <div class="posts margin-bottom-40">
     <div class="headline headline-md"><h2>Other Posts</h2></div>
     <% @otherposts.each do |post| %>
     <dl class="dl-horizontal">
       <dt><a href="#"><img src="/assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
       <dd>
-        <p><%= post.title.titleize %></p>
+        <p><strong><%= post.title.titleize %></strong></p>
          <p><%= truncate(post.content, :length => 64)%></p>
       </dd>
     </dl>
     <% end %>
   </div><!--/posts-->
-  <!-- End Recent Posts -->
+  <!-- End Other Posts (Random) -->
 
   <!-- Tabs Widget -->
   <div class="headline headline-md"><h2>Tabs Widget</h2></div>
@@ -74,14 +74,15 @@
   <!-- Photo Stream -->
   <div class="headline headline-md"><h2>Photo Stream</h2></div>
   <ul class="list-unstyled blog-photos margin-bottom-30">
-    <% @blogs.each do |blog| %>
+    <% @randpic.each do |blog| %>
     <% if blog.photo_url != nil %>
     <%= link_to blog, id: "image" do %>
     <li><%= image_tag blog.photo_url(:thumb).to_s, :class=> "hover-effect" %></li>
     <% end %>
     <% end %>
-  </ul>
-  <% end %>
+    <% end %>
+    </ul>
+
   <!-- End Photo Stream -->
 
   <!-- Blog Latest Tweets -->

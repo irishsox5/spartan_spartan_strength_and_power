@@ -9,22 +9,27 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, :class => 'form-control' %>
-  </div>
+    <div class="field">
+      <%= f.label :title %><br>
+      <%= f.text_field :title, :class => 'form-control' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author, :class => 'form-control' %>
-  </div>
+    <div class="field">
+      <%= f.label :author %><br>
+      <%= f.text_field :author, :class => 'form-control' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :photos %><br>
-    <%= f.file_field :photo %>
-  </div>
+    <div class="field">
+      <%= f.label :photos %><br>
+      <%= f.file_field :photo %>
+    </div>
+    <br>
+    <div class="field">
+    <%= f.label :remote_photo_url, "OR image URL" %><br/>
+     <%= f.text_field :remote_photo_url, :class => 'form-control' %>
+   </div>
 
   <div class="field">
     <%= f.label :content %><br>

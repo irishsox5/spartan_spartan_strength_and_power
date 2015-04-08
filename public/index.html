@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Blog Large Right Sidebar | Unify - Responsive Website Template</title>
+    <title>Unify - Responsive Website Template</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -29,17 +29,14 @@
     <link rel="stylesheet" href="assets/plugins/animate.css">
     <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-
-    <!-- CSS Page Style -->    
-    <link rel="stylesheet" href="assets/css/pages/blog.css">
-    <link rel="stylesheet" href="assets/css/pages/blog_magazine.css">
+    <link rel="stylesheet" href="assets/plugins/parallax-slider/css/parallax-slider.css">
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>	
 
-<body>    
-
+<body>
 <div class="wrapper">
     <!--=== Header ===-->    
     <div class="header">
@@ -86,12 +83,12 @@
             <div class="container">
                 <ul class="nav navbar-nav">
                     <!-- Home -->
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                             Home
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="index.html">Option 1: Default Page</a></li>
+                            <li class="active"><a href="index.html">Option 1: Default Page</a></li>
 
                             <!-- One Page -->
                             <li class="dropdown-submenu">
@@ -392,7 +389,7 @@
                     <!-- End Pages -->
 
                     <!-- Blog -->
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                             Blog
                         </a>
@@ -421,10 +418,10 @@
                                     <li><a href="blog_large_full_width_item1.html">Full Width Item</a></li>
                                 </ul>                                
                             </li>
-                            <li class="dropdown-submenu active">
+                            <li class="dropdown-submenu">
                                 <a href="javascript:void(0);">Blog Simple Pages</a>
                                 <ul class="dropdown-menu">
-                                    <li class="active"><a href="blog_large_right_sidebar.html">Right Sidebar Large</a></li>
+                                    <li><a href="blog_large_right_sidebar.html">Right Sidebar Large</a></li>
                                     <li><a href="blog_medium_right_sidebar.html">Right Sidebar Medium</a></li>                                    
                                     <li><a href="blog_large_full_width.html">Full Width</a></li>
                                     <li><a href="blog_large_right_sidebar_item.html">Right Sidebar Item</a></li>
@@ -706,315 +703,246 @@
     </div>
     <!--=== End Header ===-->
 
-    <!--=== Breadcrumbs ===-->
-    <div class="breadcrumbs">
-        <div class="container">
-            <h1 class="pull-left">Blog Large</h1>
-            <ul class="pull-right breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Blog</a></li>
-                <li class="active">Blog Large</li>
-            </ul>
+    <!--=== Slider ===-->
+    <div class="slider-inner">
+        <div id="da-slider" class="da-slider">
+            <div class="da-slide">
+                <h2><i>CLEAN &amp; FRESH</i> <br /> <i>FULLY RESPONSIVE</i> <br /> <i>DESIGN</i></h2>
+                <p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i> <br /> <i>veniam omnis </i></p>
+                <div class="da-img"><img class="img-responsive" src="assets/plugins/parallax-slider/img/1.png" alt=""></div>
+            </div>
+            <div class="da-slide">
+                <h2><i>RESPONSIVE VIDEO</i> <br /> <i>SUPPORT AND</i> <br /> <i>MANY MORE</i></h2>
+                <p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i></p>
+                <div class="da-img">
+                    <iframe src="http://player.vimeo.com/video/47911018" width="530" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+                </div>
+            </div>
+            <div class="da-slide">
+                <h2><i>USING BEST WEB</i> <br /> <i>SOLUTIONS WITH</i> <br /> <i>HTML5/CSS3</i></h2>
+                <p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i> <br /> <i>veniam omnis </i></p>
+                <div class="da-img"><img src="assets/plugins/parallax-slider/img/html5andcss3.png" alt="image01" /></div>
+            </div>
+            <div class="da-arrows">
+                <span class="da-arrows-prev"></span>
+                <span class="da-arrows-next"></span>        
+            </div>
         </div>
-    </div><!--/breadcrumbs-->
-    <!--=== End Breadcrumbs ===-->
+    </div><!--/slider-->
+    <!--=== End Slider ===-->
+
+    <!--=== Purchase Block ===-->
+    <div class="purchase">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 animated fadeInLeft">
+                    <span>Unify is a clean and fully responsive incredible Template.</span>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat corrupti quos.</p>
+                </div>            
+                <div class="col-md-3 btn-buy animated fadeInRight">
+                    <a href="#" class="btn-u btn-u-lg"><i class="fa fa-cloud-download"></i> Download Now</a>
+                </div>
+            </div>
+        </div>
+    </div><!--/row-->
+    <!-- End Purchase Block -->
 
     <!--=== Content Part ===-->
-    <div class="container content">		
-    	<div class="row blog-page">    
-            <!-- Left Sidebar -->
-        	<div class="col-md-9">
-                <!--Blog Post-->        
-            	<div class="blog margin-bottom-40">
-                	<h2><a href="blog_item_option1.html">Unify is an incredibly beautiful and fully responsive Bootstrap 3 Template</a></h2>
-                    <div class="blog-post-tags">
-                        <ul class="list-unstyled list-inline blog-info">
-                            <li><i class="fa fa-calendar"></i> February 02, 2013</li>
-                            <li><i class="fa fa-pencil"></i> Diana Anderson</li>
-                            <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
-                        </ul>
-                        <ul class="list-unstyled list-inline blog-tags">
-                            <li>
-                                <i class="fa fa-tags"></i> 
-                                <a href="#">Technology</a> 
-                                <a href="#">Education</a>
-                                <a href="#">Internet</a>
-                                <a href="#">Media</a>
-                            </li>
-                        </ul>                                                
-                    </div>
-                    <div class="blog-img">
-                        <img class="img-responsive" src="assets/img/main/img18.jpg" alt="">
-                    </div>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
-                    <p><a class="btn-u btn-u-small" href="blog_item_option1.html"><i class="fa fa-plus-sign"></i> Read More</a></p>
-                </div>
-                <!--End Blog Post-->        
+    <div class="container content-sm">
+    	<!-- Service Blocks -->
+    	<div class="row margin-bottom-30">
+        	<div class="col-md-4">
+        		<div class="service">
+                    <i class="fa fa-compress service-icon"></i>
+        			<div class="desc">
+        				<h4>Fully Responsive</h4>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+        			</div>
+        		</div>	
+        	</div>
+        	<div class="col-md-4">
+        		<div class="service">
+                    <i class="fa fa-cogs service-icon"></i>
+        			<div class="desc">
+        				<h4>HTML5 + CSS3</h4>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+        			</div>
+        		</div>	
+        	</div>
+        	<div class="col-md-4">
+        		<div class="service">
+                    <i class="fa fa-rocket service-icon"></i>
+        			<div class="desc">
+        				<h4>Launch Ready</h4>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+        			</div>
+        		</div>	
+        	</div>			    
+    	</div>
+    	<!-- End Service Blokcs -->
 
-                <!--Blog Post-->        
-                <div class="blog margin-bottom-40">
-                    <h2><a href="blog_item_option1.html">Template comes with developer friendly and easy to customizable code</a></h2>
-                    <div class="blog-post-tags">
-                        <ul class="list-unstyled list-inline blog-info">
-                            <li><i class="fa fa-calendar"></i> February 02, 2013</li>
-                            <li><i class="fa fa-pencil"></i> Diana Anderson</li>
-                            <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
-                        </ul>
-                        <ul class="list-unstyled list-inline blog-tags">
-                            <li>
-                                <i class="fa fa-tags"></i> 
-                                <a href="#">Technology</a> 
-                                <a href="#">Education</a>
-                                <a href="#">Internet</a>
-                                <a href="#">Media</a>
-                            </li>
-                        </ul>                                                
-                    </div>
-                    <div class="blog-img">
-                        <div class="responsive-video">
-                            <iframe src="http://player.vimeo.com/video/47911018" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>                        
+    	<!-- Recent Works -->
+        <div class="headline"><h2>Recent Works</h2></div>
+        <div class="row margin-bottom-20">
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                	<div class="thumbnail-img">
+                        <div class="overflow-hidden">
+                            <img class="img-responsive" src="assets/img/main/img1.jpg" alt="">
                         </div>
+                        <a class="btn-more hover-effect" href="#">read more +</a>					
                     </div>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
-                    <p><a class="btn-u btn-u-small" href="blog_item_option1.html"><i class="fa fa-plus-sign"></i> Read More</a></p>
-                </div>
-                <!--End Blog Post-->        
-
-                <!--Blog Post-->        
-                <div class="blog margin-bottom-20">
-                    <h2><a href="blog_item_option1.html">Unify Template works on all main web browsers, tablets and phones.</a></h2>
-                    <div class="blog-post-tags">
-                        <ul class="list-unstyled list-inline blog-info">
-                            <li><i class="fa fa-calendar"></i> February 02, 2013</li>
-                            <li><i class="fa fa-pencil"></i> Diana Anderson</li>
-                            <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
-                        </ul>
-                        <ul class="list-unstyled list-inline blog-tags">
-                            <li>
-                                <i class="fa fa-tags"></i> 
-                                <a href="#">Technology</a> 
-                                <a href="#">Education</a>
-                                <a href="#">Internet</a>
-                                <a href="#">Media</a>
-                            </li>
-                        </ul>                                                
+                    <div class="caption">
+                        <h3><a class="hover-effect" href="#">Project One</a></h3>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
                     </div>
-                    <div class="blog-img">
-                        <div class="carousel slide carousel-v1" id="myCarousel">
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img alt="" src="assets/img/main/img4.jpg">
-                                    <div class="carousel-caption">
-                                        <p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <img alt="" src="assets/img/main/img2.jpg">
-                                    <div class="carousel-caption">
-                                        <p>Cras justo odio, dapibus ac facilisis into egestas.</p>
-                                    </div>
-                                    </div>
-                                <div class="item">
-                                    <img alt="" src="assets/img/main/img3.jpg">
-                                    <div class="carousel-caption">
-                                        <p>Justo cras odio apibus ac afilisis lingestas de.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="carousel-arrow">
-                                <a data-slide="prev" href="#myCarousel" class="left carousel-control">
-                                    <i class="fa fa-angle-left"></i>
-                                </a>
-                                <a data-slide="next" href="#myCarousel" class="right carousel-control">
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
-                    <p><a class="btn-u btn-u-small" href="blog_item_option1.html"><i class="fa fa-plus-sign"></i> Read More</a></p>
                 </div>
-                <!--End Blog Post-->        
-                
-                <!--Pagination-->
-                <div class="text-center">
-                    <ul class="pagination">
-                        <li><a href="#">«</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li class="active"><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">»</a></li>
-                    </ul>                                                            
-                </div>
-                <!--End Pagination-->
             </div>
-            <!-- End Left Sidebar -->
-
-            <!-- Right Sidebar -->
-        	<div class="col-md-3 magazine-page">
-            	<!-- Search Bar -->
-                <div class="headline headline-md"><h2>Search</h2></div>            
-                <div class="input-group margin-bottom-40">
-                    <input type="text" class="form-control" placeholder="Search">
-                    <span class="input-group-btn">
-                        <button class="btn-u" type="button">Go</button>
-                    </span>
-                </div>
-                <!-- End Search Bar -->
-
-                <!-- Posts -->
-                <div class="posts margin-bottom-40">
-                    <div class="headline headline-md"><h2>Recent Posts</h2></div>
-                    <dl class="dl-horizontal">
-                        <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">Responsive Bootstrap 3 Template placerat idelo alac eratamet.</a></p> 
-                        </dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                        <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">100+ Amazing Features Layer Slider, Layer Slider, fa fas, 60+ Pages etc.</a></p> 
-                        </dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                        <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">Developer Friendly Code imperdiet condime ntumi mperdiet condim.</a></p> 
-                        </dd>
-                    </dl>
-                </div><!--/posts-->
-                <!-- End Posts -->
-
-            	<!-- Tabs Widget -->
-            	<div class="headline headline-md"><h2>Tabs Widget</h2></div>
-                <div class="tab-v2 margin-bottom-40">
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#home-1">About Us</a></li>
-                        <li><a data-toggle="tab" href="#home-2">Quick Links</a></li>
-                    </ul>                
-                    <div class="tab-content">
-                        <div id="home-1" class="tab-pane active">
-                            <p>Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac ac adipiscing nunc.</p> <p>Pellentesque fermentum, ante ac felis consectetur id. Donec eget orci metusvivamus imperdiet.</p>                        
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                    <div class="thumbnail-img">
+                        <div class="overflow-hidden">
+                            <img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
                         </div>
-                        <div id="home-2" class="tab-pane magazine-sb-categories">
-                            <div class="row">
-                                <ul class="list-unstyled col-xs-6">
-                                    <li><a href="#">Best Sliders</a></li>
-                                    <li><a href="#">Parralax Page</a></li>
-                                    <li><a href="#">Backgrounds</a></li>
-                                    <li><a href="#">Parralax Slider</a></li>
-                                    <li><a href="#">Responsive</a></li>
-                                    <li><a href="#">800+ fa fas</a></li>
-                                </ul>                        
-                                <ul class="list-unstyled col-xs-6">
-                                    <li><a href="#">60+ Pages</a></li>
-                                    <li><a href="#">Layer Slider</a></li>
-                                    <li><a href="#">Bootstrap 3</a></li>
-                                    <li><a href="#">Fixed Header</a></li>
-                                    <li><a href="#">Best Template</a></li>
-                                    <li><a href="#">And Many More</a></li>
-                                </ul>                        
-                            </div>
-                        </div>
+                        <a class="btn-more hover-effect" href="#">read more +</a>                   
                     </div>
-                </div>            
-                <!-- End Tabs Widget -->
-
-            	<!-- Photo Stream -->
-            	<div class="headline headline-md"><h2>Photo Stream</h2></div>
-                <ul class="list-unstyled blog-photos margin-bottom-30">
-                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/sliders/elastislide/5.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/sliders/elastislide/6.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/sliders/elastislide/8.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/sliders/elastislide/10.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/sliders/elastislide/11.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/sliders/elastislide/1.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/sliders/elastislide/2.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/sliders/elastislide/7.jpg"></a></li>
-                </ul>
-                <!-- End Photo Stream -->
-
-            	<!-- Blog Tags -->
-            	<div class="headline headline-md"><h2>Blog Tags</h2></div>
-                <ul class="list-unstyled blog-tags margin-bottom-30">
-                	<li><a href="#"><i class="fa fa-tags"></i> Business</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> Music</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> Internet</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> Money</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> Google</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> TV Shows</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> Education</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> People</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> People</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> Math</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> Photos</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> Electronics</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> Apple</a></li>
-                	<li><a href="#"><i class="fa fa-tags"></i> Canada</a></li>
-                </ul>
-                <!-- End Blog Tags -->
-
-            	<!-- Blog Latest Tweets -->
-                <div class="blog-twitter margin-bottom-40">
-                    <div class="headline headline-md"><h2>Latest Tweets</h2></div>
-                    <div class="blog-twitter-inner">
-                        <i class="fa fa-twitter"></i>
-                        <a href="#">@htmlstream</a> 
-                        At vero eos et accusamus et iusto odio dignissimos. 
-                        <a href="#">http://t.co/sBav7dm</a> 
-                        <span>5 hours ago</span>
-                    </div>
-                    <div class="blog-twitter-inner">
-                        <i class="fa fa-twitter"></i>
-                        <a href="#">@htmlstream</a> 
-                        At vero eos et accusamus et iusto odio dignissimos. 
-                        <a href="#">http://t.co/sBav7dm</a> 
-                        <span>5 hours ago</span>
-                    </div>
-                    <div class="blog-twitter-inner">
-                        <i class="fa fa-twitter"></i>
-                        <a href="#">@htmlstream</a> 
-                        At vero eos et accusamus et iusto odio dignissimos. 
-                        <a href="#">http://t.co/sBav7dm</a> 
-                        <span>5 hours ago</span>
+                    <div class="caption">
+                        <h3><a class="hover-effect" href="#">Project Two</a></h3>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
                     </div>
                 </div>
-                <!-- End Blog Latest Tweets -->
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                    <div class="thumbnail-img">
+                        <div class="overflow-hidden">
+                            <img class="img-responsive" src="assets/img/main/img3.jpg" alt="">
+                        </div>
+                        <a class="btn-more hover-effect" href="#">read more +</a>                   
+                    </div>
+                    <div class="caption">
+                        <h3><a class="hover-effect" href="#">Project Three</a></h3>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                    <div class="thumbnail-img">
+                        <div class="overflow-hidden">
+                            <img class="img-responsive" src="assets/img/main/img17.jpg" alt="">
+                        </div>
+                        <a class="btn-more hover-effect" href="#">read more +</a>                   
+                    </div>
+                    <div class="caption">
+                        <h3><a class="hover-effect" href="#">Project Four</a></h3>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	<!-- End Recent Works -->
 
-                <!-- Blog Posts -->
+    	<!-- Info Blokcs -->
+    	<div class="row margin-bottom-30">
+        	<!-- Welcome Block -->
+    		<div class="col-md-8 md-margin-bottom-40">
+    			<div class="headline"><h2>Welcome To Unify</h2></div>
                 <div class="row">
-                    <div class="magazine-posts col-md-12 col-sm-6 margin-bottom-30">
-                        <h3><a href="#">Bootstrap 3 Template</a></h3>
-                        <span><i class="color-green">By htmlstream</i> / March 19, 2014</span>
-                        <div class="magazine-posts-img">
-                            <a href="#"><img class="img-responsive" src="assets/img/main/img10.jpg" alt=""></a>
-                            <span class="magazine-badge magazine-badge-red">Unify</span>                                    
+                    <div class="col-sm-4">
+                        <img class="img-responsive margin-bottom-20" src="assets/img/main/img18.jpg" alt="">
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals. It works on all major web browsers, tablets and phone.</p>
+                        <ul class="list-unstyled margin-bottom-20">
+                            <li><i class="fa fa-check color-green"></i> Donec id elit non mi porta gravida</li>
+                            <li><i class="fa fa-check color-green"></i> Corporate and Creative</li>
+                            <li><i class="fa fa-check color-green"></i> Responsive Bootstrap Template</li>
+                            <li><i class="fa fa-check color-green"></i> Corporate and Creative</li>
+                        </ul>                    
+                    </div>
+                </div>
+
+                <blockquote class="hero-unify">
+                    <p>Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why. Unify is an incredibly beautiful responsive Bootstrap Template for corporate professionals.</p>
+                    <small>CEO, Jack Bour</small>
+                </blockquote>
+            </div><!--/col-md-8-->        
+
+            <!-- Latest Shots -->
+            <div class="col-md-4">
+    			<div class="headline"><h2>Latest Shots</h2></div>
+    			<div id="myCarousel" class="carousel slide carousel-v1">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="assets/img/main/img4.jpg" alt="">
+                            <div class="carousel-caption">
+                                <p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/img/main/img2.jpg" alt="">
+                            <div class="carousel-caption">
+                                <p>Cras justo odio, dapibus ac facilisis into egestas.</p>
+                            </div>
+                            </div>
+                        <div class="item">
+                            <img src="assets/img/main/img24.jpg" alt="">
+                            <div class="carousel-caption">
+                                <p>Justo cras odio apibus ac afilisis lingestas de.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="magazine-posts col-md-12 col-sm-6">
-                        <h3><a href="#">Parralax One Page</a></h3>
-                        <span><i class="color-green">By Taylor Miller</i> / July 19, 2014</span>
-                        <div class="magazine-posts-img">
-                            <a href="#"><img class="img-responsive" src="assets/img/main/img1.jpg" alt=""></a>
-                            <span class="magazine-badge magazine-badge-green">Bootstrap 3</span>                                    
-                        </div>
-                    </div>                
-                </div>            
-                <!-- End Blog Posts -->
-            </div>
-            <!-- End Right Sidebar -->
-        </div><!--/row-->        
-    </div><!--/container-->		
-    <!--=== End Content Part ===-->
+                    
+                    <div class="carousel-arrow">
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+    			</div>
+            </div><!--/col-md-4-->
+    	</div>	
+    	<!-- End Info Blokcs -->
 
-     <!--=== Footer Version 1 ===-->
+        <!-- Owl Clients v1 -->
+        <div class="headline"><h2>Our Clients</h2></div>        
+        <div class="owl-clients-v1">
+            <div class="item">
+                <img src="assets/img/clients4/1.png" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/img/clients4/2.png" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/img/clients4/3.png" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/img/clients4/4.png" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/img/clients4/5.png" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/img/clients4/6.png" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/img/clients4/7.png" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/img/clients4/8.png" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/img/clients4/9.png" alt="">
+            </div>
+        </div>
+        <!-- End Owl Clients v1 -->
+    </div><!--/container-->
+    <!-- End Content Part -->
+
+    <!--=== Footer Version 1 ===-->
     <div class="footer-v1">
         <div class="footer">
             <div class="container">
@@ -1132,25 +1060,32 @@
                 </div>
             </div> 
         </div><!--/copyright-->
-    </div>     
+    </div>
     <!--=== End Footer Version 1 ===-->
 </div><!--/wrapper-->
 
-<!-- JS Global Compulsory -->           
+<!-- JS Global Compulsory -->			
 <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-<!-- JS Implementing Plugins -->           
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
 <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
 <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+<script type="text/javascript" src="assets/plugins/parallax-slider/js/modernizr.js"></script>
+<script type="text/javascript" src="assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
+<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
 <!-- JS Customization -->
 <script type="text/javascript" src="assets/js/custom.js"></script>
 <!-- JS Page Level -->           
 <script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
+<script type="text/javascript" src="assets/js/plugins/parallax-slider.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
-        App.init();
-        });
+      	App.init();
+        OwlCarousel.initOwlCarousel();        
+        ParallaxSlider.initParallaxSlider();
+    });
 </script>
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>
@@ -1159,4 +1094,4 @@
 <![endif]-->
 
 </body>
-</html>	
+</html>
