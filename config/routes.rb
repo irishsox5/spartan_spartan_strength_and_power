@@ -3,9 +3,6 @@ Rails.application.routes.draw do
 
    devise_for :users, :controllers => { registrations: 'registrations' }
    devise_scope :user do
-     get "/login" => "devise/sessions#new"
-     get "/sign_up" => "devise/registrations#new"
-     get "/new_password" => "devise/passwords#new"
 
     authenticated :user do
       root 'static_pages#programs', as: :authenticated_root
@@ -24,6 +21,7 @@ Rails.application.routes.draw do
   match '/free_trial', to: 'contacts#new', via: 'get',:as => 'trials'
   resources "contacts", only: [:create]
   get '/spartan_programs'=>"static_pages#programs", :as =>"programs"
+  get 'tags/:tag', to: 'blogs#index', as: :tag
 
 
 

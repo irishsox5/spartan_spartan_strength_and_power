@@ -14,7 +14,7 @@
       <form id="sky-form1" class="sky-form contact-style">
         <div class="reg-header">
           <h2>Register a new account</h2>
-          <p>Already Signed Up? Click <%= link_to "Sign In", login_url %> to login your account.</p>
+          <p>Already Signed Up? Click <%= link_to "Sign In", new_user_session_url %> to login your account.</p>
         </div>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
@@ -36,7 +36,7 @@
             <label>Password <span class="color-red">*</span></label>
             <% if @validatable %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %>
+           <% end %>
             <%= f.password_field :password, autocomplete: "off", :class=> "form-control margin-bottom-20" %>
           </div>
 

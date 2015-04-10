@@ -5,9 +5,13 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
+    if params[:tag].present?
+      @blogs= Blog.tagged_with(params[:tag]).page(params[:page]).per(12)
+    else
+      @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
+    end
     @otherposts = Blog.all.shuffle.take(3)
-    @randpic=Blog.all.limit(8).shuffle
+    @randpic=Blog.all.shuffle.take(8)
   end
 
   # GET /blogs/1
@@ -72,7 +76,7 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :author, :content, :photo, :remote_photo_url)
+      params.require(:blog).permit(:title, :author, :content, :photo, :remote_photo_url, :tag_list)
     end
 
       private

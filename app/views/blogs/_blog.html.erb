@@ -8,15 +8,16 @@
       <li><i class="fa fa-pencil"></i> <%= blog.author %></li>
       <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
     </ul>
+      <% if blog.tags.any? %>
     <ul class="list-unstyled list-inline blog-tags">
       <li>
         <i class="fa fa-tags"></i>
-        <a href="#">Technology</a>
-        <a href="#">Education</a>
-        <a href="#">Internet</a>
-        <a href="#">Media</a>
+         <% blog.tags.each do |tag| %>
+        <%= link_to tag.name, tag_url(tag.name) %>
+        <% end %>
       </li>
     </ul>
+    <% end %>
   </div>
   <div class="blog-img">
     <%= image_tag blog.photo_url.to_s,:class=>"img-responsive", :width => 844 %>
