@@ -11,7 +11,7 @@
   <div class="container content-sm">
     <!-- Blog Posts -->
     <div class="news-v3 margin-bottom-60">
-      <%= image_tag @blog.photo_url.to_s,:class=>"img-responsive", :width => 1140, :height => 1218 %>
+      <%= image_tag @blog.photo_url.to_s,:class=>"img-responsive", :width => 1140, :height => 915 %>
       <div class="btn-group btn-group-justified">
         <%= link_to icon('chevron-left'), blogs_path, class: "btn btn-primary" %>
 
@@ -22,7 +22,7 @@
       <div class="news-v3-in">
         <ul class="list-inline posted-info">
           <li>By <%= @blog.author %></li>
-          <li><%= @blog.created_at.strftime("%B-%m-%Y") %></li>
+          <li><%= @blog.created_at.strftime("%B-%d-%Y") %></li>
         </ul>
         <h2><a href="#"><%= @blog.title %></a></h2>
         <p><%= @blog.content %></p>

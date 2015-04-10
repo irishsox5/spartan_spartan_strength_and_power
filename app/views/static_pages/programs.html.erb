@@ -6,7 +6,7 @@
             <% if current_user.present? %>
             <li>Pick A Program That Best Fits Your Needs!</li>
             <% else %>
-            <li><%= link_to "Register And Login To Pay and Join!", sign_up_url %></li>
+            <li><%= link_to "Register Or Login To Pay and Join!", new_user_registration_url %></li>
             <% end %>
         </ul>
     </div>

@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     if params[:tag].present?
-      @blogs= Blog.tagged_with(params[:tag]).page(params[:page]).per(12)
+      @blogs= Blog.tagged_with(params[:tag]).order("created_at DESC").page(params[:page]).per(12)
     else
       @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
     end
@@ -35,7 +35,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
+        format.html { redirect_to @blog }
         format.json { render :show, status: :created, location: @blog }
       else
         format.html { render :new }
@@ -49,7 +49,7 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to @blog }
         format.json { render :show, status: :ok, location: @blog }
       else
         format.html { render :edit }
