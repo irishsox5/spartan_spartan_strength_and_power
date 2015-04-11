@@ -4,7 +4,7 @@
   <!-- Blog Tags -->
   <div class="headline headline-md"><h2>Blog Tags</h2></div>
   <ul class="list-unstyled blog-tags margin-bottom-30">
-    <% tag_cloud Blog.tag_counts, % s do |tag, css_class|%>
+    <% tag_cloud Blog.tag_counts_on(:tags).most_used.limit(15), % s do |tag, css_class|%>
     <%= link_to tag_path(tag.name), class: css_class do%>
     <li> <i class="fa fa-tags"> <%= tag.name  %></i></li>
     <% end %>
