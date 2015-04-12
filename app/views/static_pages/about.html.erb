@@ -1,15 +1,39 @@
-<!--=== Breadcrumbs v3 ===-->
-<div class="breadcrumbs-v3 img-v1">
-    <div class="container text-center">
-        <p>Meet Our Team</p>
-        <h1>Our Experienced Coaching Staff</h1>
-    </div><!--/end container-->
-</div>
-<!--=== End Breadcrumbs v3 ===-->
+<!-- Parallax Counter -->
+    <div class="parallax-counter-v2 parallaxBg1" style="background-position: 50% 31px;">
+        <div class="container">
+            <ul class="row list-row">
+                <li class="col-md-3 col-sm-6 col-xs-12 md-margin-bottom-30">
+                    <div class="counters rounded">
+                        <span class="counter">18298</span>
+                        <h4 class="text-transform-normal">Leg Days</h4>
+                    </div>
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-12 md-margin-bottom-30">
+                    <div class="counters rounded">
+                        <span class="counter">24583</span>
+                        <h4 class="text-transform-normal">Protein Shakes</h4>
+                    </div>
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-12 sm-margin-bottom-30">
+                    <div class="counters rounded">
+                        <span class="counter">37904</span>
+                        <h4 class="text-transform-normal">Hours Of Experience</h4>
+                    </div>
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="counters rounded">
+                        <span class="counter">3530</span>
+                        <h4 class="text-transform-normal">Opponents Pinned</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Parallax Counter -->
 
 <div class="container-fluid">
     <!-- Team Blocks -->
-    <div class="row team-v7 no-gutter equal-height-columns">
+    <div class="row team-v7 no-gutter equal-height-columns wow bounceInLeft">
         <div class="col-md-6 team-arrow-right">
             <div class="dp-table">
                 <div class="equal-height-column dp-table-cell team-v7-in">
@@ -31,7 +55,7 @@
     <!-- End Team Blocks -->
 
     <!-- Team Blocks -->
-    <div class="row team-v7 no-gutter equal-height-columns">
+    <div class="row team-v7 no-gutter equal-height-columns wow bounceInRight">
         <div class="col-md-6 col-md-push-6 team-arrow-left">
             <div class="dp-table">
                 <div class="equal-height-column dp-table-cell team-v7-in">
@@ -53,7 +77,7 @@
     <!-- End Team Blocks -->
 
     <!-- Team Blocks -->
-    <div class="row team-v7 no-gutter equal-height-columns">
+    <div class="row team-v7 no-gutter equal-height-columns wow bounceInLeft">
         <div class="col-md-6 team-arrow-right">
             <div class="dp-table">
                 <div class="equal-height-column dp-table-cell team-v7-in">
@@ -73,7 +97,7 @@
         </div>
     </div>
     <!-- Team Blocks -->
-    <div class="row team-v7 no-gutter equal-height-columns">
+    <div class="row team-v7 no-gutter equal-height-columns wow bounceInRight">
         <div class="col-md-6 col-md-push-6 team-arrow-left">
             <div class="dp-table">
                 <div class="equal-height-column dp-table-cell team-v7-in">
@@ -94,3 +118,18 @@
     </div>
     <!-- End Team Blocks -->
 </div>
+
+
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="assets/plugins/jquery.parallax.js"></script>
+<script type="text/javascript" src="assets/plugins/counter/waypoints.min.js"></script>
+<script type="text/javascript" src="assets/plugins/counter/jquery.counterup.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        App.initCounter();
+        App.initParallaxBg();
+        new WOW().init();
+    });
+</script>

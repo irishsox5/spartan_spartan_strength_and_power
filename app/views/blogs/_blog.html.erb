@@ -20,7 +20,7 @@
     <% end %>
   </div>
   <div class="blog-img">
-    <%= image_tag blog.photo_url.to_s,:class=>"img-responsive", :width => 844, :height => 615 %>
+    <%= image_tag blog.photo_url.to_s,:class=>"img-responsive", :width => 844, :height => 562 %>
   </div>
   <p><%= truncate(blog.content, :length => 150) %></p>
   <p> <%= link_to blog, :class=> "btn-u btn-u-small" , id: "show" do %>
