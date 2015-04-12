@@ -1,0 +1,203 @@
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs breadcrumbs-light">
+  <div class="container">
+    <h1 class="pull-left">Spartan Program Gallery</h1>
+  </div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+
+<!-- Three Columns -->
+<div class="container content">
+  <div class="text-center margin-bottom-50">
+    <h2 class="title-v2 title-center">Photos and Videos</h2>
+    <p class="space-lg-hor">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="row">
+    <div class="col-xs-12">
+     <input type="text" id="quicksearch" placeholder="Search Galleries (start typing)" class="form-control">
+    </div>
+  </div>
+  <!-- End Search Bar -->
+
+  <hr>
+
+  <div class="row  margin-bottom-30 isotope-container">
+    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
+      <a href="assets/img/main/img2.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 1">
+        <span><img class="img-responsive" src="assets/img/main/img2.jpg" alt=""></span>
+      </a>
+    </div>
+    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
+      <a href="assets/img/main/img4.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 2">
+        <span><img class="img-responsive" src="assets/img/main/img4.jpg" alt=""></span>
+      </a>
+    </div>
+    <div class="col-sm-4 isotope-item">
+      <a href="assets/img/main/img5.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 3">
+        <span><img class="img-responsive" src="assets/img/main/img5.jpg" alt=""></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="row margin-bottom-30 isotope-container">
+    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
+      <a href="assets/img/main/img6.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 4">
+        <span><img class="img-responsive" src="assets/img/main/img6.jpg" alt=""></span>
+      </a>
+    </div>
+    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
+      <a href="assets/img/main/img7.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 5">
+        <span><img class="img-responsive" src="assets/img/main/img7.jpg" alt=""></span>
+      </a>
+    </div>
+    <div class="col-sm-4 isotope-item">
+      <a href="assets/img/main/img8.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 6">
+        <span><img class="img-responsive" src="assets/img/main/img8.jpg" alt=""></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="row isotope-container">
+    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
+      <a href="assets/img/main/img9.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 7">
+        <span><img class="img-responsive" src="assets/img/main/img9.jpg" alt=""></span>
+      </a>
+    </div>
+    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
+      <a href="assets/img/main/img10.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 8">
+        <span><img class="img-responsive" src="assets/img/main/img10.jpg" alt=""></span>
+      </a>
+    </div>
+    <div class="col-sm-4 isotope-item">
+      <a href="assets/img/main/img11.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 9">
+        <span><img class="img-responsive" src="assets/img/main/img11.jpg" alt=""></span>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- End Three Columns -->
+<!-- Fancy Box -->
+<script type="text/javascript" src="/assets/js/plugins/fancy-box.js"></script>
+<script type="text/javascript" src="/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+<!-- End Fancy Box -->
+
+<!-- JavaScript for Isotope layout and quicksearch -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.0.0/isotope.pkgd.min.js"></script>
+
+<!-- End responsive, Isotope-based layout example -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        FancyBox.initFancybox();
+        });
+
+     $(function() {
+    // quick search regex
+    var qsRegex;
+
+    // init Isotope
+    var $container = $('.isotope-container');
+
+    $container.imagesLoaded(function() {
+      $container.isotope({
+        itemSelector: '.isotope-item',
+        layoutMode: 'masonry',
+        filter: function() {
+          return qsRegex ? $(this).text().match( qsRegex ) : true;
+        }
+      })
+    });
+
+    // use value of search field to filter
+    var $quicksearch = $('#quicksearch').keyup( debounce( function() {
+      qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+      $container.isotope();
+    }, 200 ) );
+
+  });
+
+  // debounce so filtering doesn't happen every millisecond
+  function debounce( fn, threshold ) {
+    var timeout;
+    return function debounced() {
+      if ( timeout ) {
+        clearTimeout( timeout );
+      }
+      function delayed() {
+        fn();
+        timeout = null;
+      }
+      timeout = setTimeout( delayed, threshold || 100 );
+    }
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Responsive, Isotope-based layout example -->
+
+
+
+<div class="row isotope-container">
+<% @galleries.each do |gallery| %>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Gallery #<%= gallery.id %></h3>
+      </div>
+      <div class="panel-body">
+        <dl>
+          <dt>Title</dt>
+          <dd><%= gallery.title %></dd>
+
+          <dt>Description</dt>
+          <dd><%= gallery.description %></dd>
+
+          <dt>Photo</dt>
+          <dd><%= gallery.photo %></dd>
+
+          <dt>Video</dt>
+          <dd><%= gallery.video %></dd>
+
+        </dl>
+        <div class="btn-group btn-group-justified">
+          <%= link_to icon('search-plus'), gallery, class: "btn btn-primary" %>
+
+          <%= link_to icon('edit'), edit_gallery_url(gallery), class: "btn btn-warning" %>
+
+          <%= link_to icon('trash-o'), gallery, method: :delete, data: { confirm: "Do you really want to delete this gallery?" }, class: "btn btn-danger" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+
+
