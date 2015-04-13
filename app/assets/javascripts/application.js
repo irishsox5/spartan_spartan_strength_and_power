@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require moment
+//= require fullcalendar
 //= require bootstrap-sprockets
 //= require awesome-share-buttons
 //= require_tree .

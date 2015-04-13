@@ -25,6 +25,10 @@ gem 'awesome-share-buttons', github: 'evansobkowicz/awesome-share-buttons'
 
 gem 'acts-as-taggable-on', '~> 3.4'
 
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

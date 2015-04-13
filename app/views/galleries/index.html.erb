@@ -1,5 +1,5 @@
 <!--=== Breadcrumbs ===-->
-<div class="breadcrumbs breadcrumbs-light">
+<div class="breadcrumbs">
   <div class="container">
     <h1 class="pull-left">Spartan Program Gallery</h1>
   </div>
@@ -17,65 +17,26 @@
   <!-- Search Bar -->
   <div class="row">
     <div class="col-xs-12">
-     <input type="text" id="quicksearch" placeholder="Search Galleries (start typing)" class="form-control">
+     <input type="text" id="quicksearch" placeholder="Search Through Gallery (start typing)" class="form-control">
     </div>
   </div>
   <!-- End Search Bar -->
-
   <hr>
-
   <div class="row  margin-bottom-30 isotope-container">
+    <% @galleries.each do |gallery| %>
     <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
-      <a href="assets/img/main/img2.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 1">
-        <span><img class="img-responsive" src="assets/img/main/img2.jpg" alt=""></span>
+      <a href=<%= asset_path(gallery.image.large) %> rel="gallery/image" class="fancybox img-hover-v1" title="<%= gallery.title %>">
+      <% if gallery.video == nil || "" %>
+        <span>
+        <%= image_tag gallery.image_url.to_s,:class=>"img-responsive" %></span>
+        <% else %>
+        <span><%= image_tag gallery.video_url.to_s,:class=>"embed-responsive embed-responsive-16by9" %></span>
+        <% end %>
       </a>
+      <div class="list-group-item text-center "><%= gallery.title %></div>
+      <hr>
     </div>
-    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
-      <a href="assets/img/main/img4.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 2">
-        <span><img class="img-responsive" src="assets/img/main/img4.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-4 isotope-item">
-      <a href="assets/img/main/img5.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 3">
-        <span><img class="img-responsive" src="assets/img/main/img5.jpg" alt=""></span>
-      </a>
-    </div>
-  </div>
-
-  <div class="row margin-bottom-30 isotope-container">
-    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
-      <a href="assets/img/main/img6.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 4">
-        <span><img class="img-responsive" src="assets/img/main/img6.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
-      <a href="assets/img/main/img7.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 5">
-        <span><img class="img-responsive" src="assets/img/main/img7.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-4 isotope-item">
-      <a href="assets/img/main/img8.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 6">
-        <span><img class="img-responsive" src="assets/img/main/img8.jpg" alt=""></span>
-      </a>
-    </div>
-  </div>
-
-  <div class="row isotope-container">
-    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
-      <a href="assets/img/main/img9.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 7">
-        <span><img class="img-responsive" src="assets/img/main/img9.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-4 sm-margin-bottom-30 isotope-item">
-      <a href="assets/img/main/img10.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 8">
-        <span><img class="img-responsive" src="assets/img/main/img10.jpg" alt=""></span>
-      </a>
-    </div>
-    <div class="col-sm-4 isotope-item">
-      <a href="assets/img/main/img11.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 9">
-        <span><img class="img-responsive" src="assets/img/main/img11.jpg" alt=""></span>
-      </a>
-    </div>
+    <% end %>
   </div>
 </div>
 <!-- End Three Columns -->
@@ -161,43 +122,9 @@
 
 
 
-<!-- Responsive, Isotope-based layout example -->
 
 
 
-<div class="row isotope-container">
-<% @galleries.each do |gallery| %>
-  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Gallery #<%= gallery.id %></h3>
-      </div>
-      <div class="panel-body">
-        <dl>
-          <dt>Title</dt>
-          <dd><%= gallery.title %></dd>
 
-          <dt>Description</dt>
-          <dd><%= gallery.description %></dd>
-
-          <dt>Photo</dt>
-          <dd><%= gallery.photo %></dd>
-
-          <dt>Video</dt>
-          <dd><%= gallery.video %></dd>
-
-        </dl>
-        <div class="btn-group btn-group-justified">
-          <%= link_to icon('search-plus'), gallery, class: "btn btn-primary" %>
-
-          <%= link_to icon('edit'), edit_gallery_url(gallery), class: "btn btn-warning" %>
-
-          <%= link_to icon('trash-o'), gallery, method: :delete, data: { confirm: "Do you really want to delete this gallery?" }, class: "btn btn-danger" %>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
-</div>
 
 

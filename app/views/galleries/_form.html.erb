@@ -22,13 +22,15 @@
   </div>
 <hr>
   <div class="field">
-    <%= f.label :photo %><br>
-    <%= f.text_field :photo, :class => 'form-control' %>
+    <%= f.label :image, "Upload Image" %><br>
+    <%= f.file_field  :image %>
   </div>
 <hr>
+<div>OR</div>
+<hr>
   <div class="field">
-    <%= f.label :video %><br>
-    <%= f.text_field :video, :class => 'form-control' %>
+    <%= f.label :video, "Upload Video" %><br>
+    <%=f.file_field :video%>
   </div>
 <hr>
   <div class="actions">
