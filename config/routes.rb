@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :events
 
-  resources :galleries
+  resources :galleries, except: [:show]
 
   resources :blogs
 
