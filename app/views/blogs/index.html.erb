@@ -2,7 +2,7 @@
 <div class="breadcrumbs">
   <div class="container">
    <br>
-    <h1 class="pull-left">Spartan Strength And Power Blog</h1>
+    <h1 class="pull-left">Spartan Strength And Power Blog<% if current_user.present? %> <%= link_to icon('plus'), new_blog_url, class: "btn btn-lg btn-success"  %> <% end %></h1>
      <ul class="pull-right breadcrumb">
            <li><%= awesome_share_buttons("Check Out Spartan Strength And Power") %></li>
         </ul>
