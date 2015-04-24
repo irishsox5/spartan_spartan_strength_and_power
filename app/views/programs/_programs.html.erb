@@ -26,7 +26,7 @@
         <div class="pricing-table-v6">
         <% if Program.find_by(id: 2) != nil%>
             <div class="service-block service-block-red">
-                <i class="icon-custom icon-color-light rounded-x icon-line icon-shield"></i>
+                <i class="icon-custom icon-color-light rounded-x icon-line fa fa-shield"></i>
                 <h2 class="heading-md"><%= Program.find_by(id: 2).name %></h2>
                 <p><%= truncate(Program.find_by(id: 2).description, :length => 96) %></p>
                 <h3><span>$</span>180<i> Per/Month</i></h3>
