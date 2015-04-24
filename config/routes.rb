@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :programs, except: [:show]
+
   resources :events
 
   resources :galleries
@@ -9,7 +12,7 @@ Rails.application.routes.draw do
    devise_scope :user do
 
     authenticated :user do
-      root 'static_pages#programs', as: :authenticated_root
+      root 'programs#index', as: :authenticated_root
     end
 
     unauthenticated do
@@ -24,7 +27,6 @@ Rails.application.routes.draw do
   get '/faqs' => "static_pages#faqs", :as => 'faqs'
   match '/free_trial', to: 'contacts#new', via: 'get',:as => 'trials'
   resources "contacts", only: [:create]
-  get '/spartan_programs'=>"static_pages#programs", :as =>"programs"
   get 'tags/:tag', to: 'blogs#index', as: :tag
 
 

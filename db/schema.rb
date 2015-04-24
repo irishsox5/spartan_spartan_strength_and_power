@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412225432) do
+ActiveRecord::Schema.define(version: 20150423231050) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -22,13 +22,25 @@ ActiveRecord::Schema.define(version: 20150412225432) do
     t.string   "photo"
   end
 
+  create_table "event_series", force: :cascade do |t|
+    t.integer  "frequency"
+    t.string   "period"
+    t.datetime "starttime"
+    t.datetime "endtime"
+    t.boolean  "all_day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string   "title"
+    t.datetime "starttime"
+    t.datetime "endtime"
+    t.boolean  "all_day"
     t.text     "description"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "event_series_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "galleries", force: :cascade do |t|
@@ -41,12 +53,9 @@ ActiveRecord::Schema.define(version: 20150412225432) do
   end
 
   create_table "programs", force: :cascade do |t|
-    t.string   "tier"
-    t.integer  "price"
+    t.string   "name"
     t.text     "description"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.string   "schedule_id"
+    t.integer  "price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

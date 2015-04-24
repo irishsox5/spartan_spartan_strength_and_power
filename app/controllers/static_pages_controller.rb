@@ -15,8 +15,4 @@ class StaticPagesController < ApplicationController
 
   end
 
-  def programs
-
-  end
-
 end

@@ -1,0 +1,263 @@
+ <!-- Pricing Table-v6 -->
+ <div class="row margin-bottom-10 no-space-pricing-v6">
+    <div class="col-md-3 col-sm-6 col-xs-6 col-width-full wow bounceInLeft">
+        <div class="pricing-table-v6">
+        <% if Program.find_by(id: 1) != nil%>
+            <div class="service-block service-block-dark-blue">
+                <i class="icon-custom icon-color-light rounded-x fa fa-user"></i>
+                <h2 class="heading-md"><%= Program.find_by(id: 1).name%></h2>
+                <p><%= truncate(Program.find_by(id: 1).description, :length => 96) %></</p>
+                <h3><span>$</span><%= Program.find_by(id: 1).price%><i> Per/Month</i></h3>
+                <ul class="list-unstyled pricing-v4-content text-center">
+                    <li><span class="fa fa-credit-card"></span> Monthly Payment Structure</li>
+                    <li><span class="icon-drawer"></span> Disckspace - 500GB</li>
+                    <li><span class="icon-envelope-open"></span> Email Addresses - 900</li>
+                    <li><span class="icon-layers"></span> MySQL Databases</li>
+                    <li><span class="icon-wrench"></span> Customisable Toolbar</li>
+                </ul>
+                <% if current_user.present? %>
+                <a href="#" class="btn-u btn-brd btn-u pulse-grow">Purchase Membership</a>
+                <%end %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6 col-width-full wow flip">
+        <div class="pricing-table-v6">
+        <% if Program.find_by(id: 2) != nil%>
+            <div class="service-block service-block-red">
+                <i class="icon-custom icon-color-light rounded-x icon-line icon-shield"></i>
+                <h2 class="heading-md"><%= Program.find_by(id: 2).name %></h2>
+                <p><%= truncate(Program.find_by(id: 2).description, :length => 96) %></p>
+                <h3><span>$</span>180<i> Per/Month</i></h3>
+                <ul class="list-unstyled pricing-v4-content">
+                    <li><span class="icon-user"></span> Gym Membership</li>
+                    <li><span class="fa fa-credit-card"></span> Monthly Payment Structure</li>
+                    <li><span class="icon-envelope-open"></span> Email Addresses - 900</li>
+                    <li><span class="icon-layers"></span> MySQL Databases</li>
+                    <li><span class="icon-wrench"></span> Customisable Toolbar</li>
+                </ul>
+                <% if current_user.present? %>
+                <a href="#" class="btn-u btn-brd btn-u pulse-grow">Purchase Membership</a>
+                <% end %>
+            </div>
+        <% end %>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6 col-width-full wow flip">
+        <div class="pricing-table-v6">
+         <% if Program.find_by(id: 3) != nil%>
+            <div class="service-block service-block-dark">
+                <i class="icon-custom icon-color-light rounded-x fa fa-users"></i>
+                <h2 class="heading-md"><%= Program.find_by(id: 3).name %><!-- Leonidas Package --> </h2>
+                <p><%= truncate(Program.find_by(id: 3).description, :length => 96) %></p>
+                <h3><span>$</span><%= Program.find_by(id: 3).price %><i></h3>
+                <ul class="list-unstyled pricing-v4-content text-center">
+                    <li><span class="fa fa-money"></span> Single Payment</li>
+                    <li><span class="icon-drawer"></span> Disckspace - 500GB</li>
+                    <li><span class="icon-envelope-open"></span> Email Addresses - 900</li>
+                    <li><span class="icon-layers"></span> MySQL Databases</li>
+                    <li><span class="icon-wrench"></span> Customisable Toolbar</li>
+                </ul>
+                <% if current_user.present? %>
+                <a href="#" class="btn-u btn-brd btn-u pulse-grow">Purchase Membership</a>
+                <%end %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6 col-width-full wow bounceInRight">
+        <div class="pricing-table-v6">
+        <% if Program.find_by(id: 4) != nil%>
+        <div class="service-block service-block-u">
+            <i class="icon-custom icon-color-light rounded-x icon-line icon-diamond"></i>
+            <h2 class="heading-md"><%= Program.find_by(id: 4).name %><!-- Leonidas Package Plus --></h2>
+            <p><%= truncate(Program.find_by(id: 4).description, :length => 96) %></p>
+            <h3><span>$</span><%= Program.find_by(id: 4).price %><i></h3>
+            <ul class="list-unstyled pricing-v4-content text-center">
+                <li><span class="icon-user"></span> Gym Membership </li>
+                <li><span class="fa fa-money"></span> Single Payment</li>
+                <li><span class="icon-envelope-open"></span> Email Addresses - 900</li>
+                <li><span class="icon-layers"></span> MySQL Databases</li>
+                <li><span class="icon-wrench"></span> Customisable Toolbar</li>
+            </ul>
+            <% if current_user.present? %>
+            <a href="#" class="btn-u btn-brd btn-u pulse-grow">Purchase Membership</a>
+            <%end %>
+        </div>
+        <% end %>
+    </div>
+</div>
+</div>
+<!-- End Pricing Table-v6 -->
+
+<div class="margin-bottom-50"><hr></div>
+
+<!-- Pricing Table-v8 -->
+<div class="row row-no-space margin-bottom-10">
+    <div class="col-md-4 col-sm-6 wow rotateInUpLeft">
+    <% if Program.find_by(id: 6) != nil%>
+        <div class="pricing-table-v8 service-block-brown sm-margin-bottom-30">
+            <div class="service-block ">
+                <h2 class="heading-md"><%= Program.find_by(id: 6).name %></h2>
+                <span><i class="dollar">$</i><%= Program.find_by(id: 6).price %><i>Per/Month</i></span>
+                <p><%= truncate(Program.find_by(id: 6).description, :length => 72) %></p>
+                <% if current_user.present? %>
+                <a href="#" class="btn-u btn-brd btn-u pulse-grow">Purchase Now</a>
+                <% end %>
+            </div>
+            <div class="row pricing-body no-space-pricing no-row-space text-center">
+                <div class="col-xs-6">
+                    <div class="pricing-inner-1">
+                        <i class="icon-user"></i>
+                        <span>1 User</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-2">
+                        <i class="icon-envelope-open"></i>
+                        <span>10 Emails</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-1">
+                        <i class="icon-drawer"></i>
+                        <span>3GB Diskspace</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-2">
+                        <i class="icon-cloud-upload"></i>
+                        <span>1GB Cloud Storage</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-1">
+                        <i class="icon-credit-card"></i>
+                        <span>Bandwidth</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-2">
+                        <i class="icon-call-out"></i>
+                        <span>Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <% end %>
+    </div>
+    <div class="col-md-4 col-sm-6 wow fadeInUp">
+    <% if Program.find_by(id: 5) != nil%>
+        <div class="pricing-table-v8 service-block-orange sm-margin-bottom-30 md-margin-bottom-30">
+            <div class="service-block ">
+                <h2 class="heading-md"><%= Program.find_by(id: 5).name %></h2>
+                <span><i class="dollar">$</i><%= Program.find_by(id: 5).price %><i>Per/Month</i></span>
+                <p><%= truncate(Program.find_by(id: 5).description, :length => 72) %></p>
+                 <% if current_user.present? %>
+                <a href="#" class="btn-u btn-brd btn-u pulse-grow">Purchase Now</a>
+                <% end %>
+            </div>
+            <div class="row pricing-body no-space-pricing no-row-space text-center">
+                <div class="col-xs-6">
+                    <div class="pricing-inner-1">
+                        <i class="icon-user"></i>
+                        <span>1 User</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-2">
+                        <i class="icon-envelope-open"></i>
+                        <span>10 Emails</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-1">
+                        <i class="icon-drawer"></i>
+                        <span>3GB Diskspace</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-2">
+                        <i class="icon-cloud-upload"></i>
+                        <span>1GB Cloud Storage</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-1">
+                        <i class="icon-credit-card"></i>
+                        <span>Bandwidth</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-2">
+                        <i class="icon-call-out"></i>
+                        <span>Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+    <div class="col-md-4 col-sm-6 wow rotateInUpRight">
+    <% if Program.find_by(id: 7) != nil%>
+        <div class="pricing-table-v8 service-block-light-green sm-margin-bottom-30">
+            <div class="service-block ">
+                <h2 class="heading-md"><%= Program.find_by(id: 7).name %></h2>
+                <span><i class="dollar">$</i><%= Program.find_by(id: 7).price %><i>Per/Month</i></span>
+                <p><%= truncate(Program.find_by(id: 7).description, :length => 72) %></p>
+                <% if current_user.present? %>
+                <a href="#" class="btn-u btn-brd btn-u pulse-grow">Purchase Now</a>
+               <% end %>
+            </div>
+            <div class="row pricing-body no-space-pricing no-row-space text-center">
+                <div class="col-xs-6">
+                    <div class="pricing-inner-1">
+                        <i class="icon-user"></i>
+                        <span>1 User</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-2">
+                        <i class="icon-envelope-open"></i>
+                        <span>10 Emails</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-1">
+                        <i class="icon-drawer"></i>
+                        <span>3GB Diskspace</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-2">
+                        <i class="icon-cloud-upload"></i>
+                        <span>1GB Cloud Storage</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-1">
+                        <i class="icon-credit-card"></i>
+                        <span>Bandwidth</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="pricing-inner-2">
+                        <i class="icon-call-out"></i>
+                        <span>Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+    </div>
+</div>
+        <!-- End Pricing Table-v8 -->
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        new WOW().init();
+    });
+</script>
