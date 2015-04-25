@@ -69,8 +69,8 @@
     <div class="col-md-3 col-sm-6 col-xs-6 col-width-full wow bounceInRight">
         <div class="pricing-table-v6">
         <% if Program.find_by(id: 4) != nil%>
-        <div class="service-block service-block-u">
-            <i class="icon-custom icon-color-light rounded-x icon-line icon-diamond"></i>
+        <div class="service-block service-block-brown">
+            <i class="icon-custom icon-color-light rounded-x icon-line  fa fa-rebel"></i>
             <h2 class="heading-md"><%= Program.find_by(id: 4).name %><!-- Leonidas Package Plus --></h2>
             <p><%= truncate(Program.find_by(id: 4).description, :length => 96) %></p>
             <h3><span>$</span><%= Program.find_by(id: 4).price %><i></h3>
