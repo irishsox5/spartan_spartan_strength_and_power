@@ -1,18 +1,18 @@
 var ContactPage = function () {
 
     return {
-        
+
     	//Basic Map
         initMap: function () {
 			var map;
 			$(document).ready(function(){
 			  map = new GMaps({
 				div: '#map',
-				scrollwheel: false,				
+				scrollwheel: false,
 				lat: 40.748866,
 				lng: -73.988366
 			  });
-			  
+
 			  var marker = map.addMarker({
 				lat: 40.748866,
 				lng: -73.988366,
@@ -27,11 +27,11 @@ var ContactPage = function () {
 		    $(document).ready(function(){
 		      panorama = GMaps.createPanorama({
 		        el: '#panorama',
-		        lat : 40.748866,
-		        lng : -73.988366
+		        lat : 41.962285,
+		        lng : -87.689046
 		      });
 		    });
-		}        
+		}
 
     };
 }();

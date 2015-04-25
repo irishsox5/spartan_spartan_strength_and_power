@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-md-9 animated fadeInLeft">
                 <span>An Intensive Physical Training, Wrestling, and Weightlifting Program </span>
-                <p>Strength and conditioning company. Focused on improving athletic performance</p><p>using efficient, safe training techniques and proper programming.</p>
+                <p class="lead">Strength and conditioning company. Focused on improving athletic performance</p><p class="lead">using efficient, safe training techniques and proper programming.</p>
             </div>
             <div class="col-md-3 btn-buy animated fadeInRight">
                 <%= link_to programs_url, :class=> "btn-u btn-u-lg", id: "buy" do %>
@@ -51,103 +51,63 @@
      <div class="col-md-3">
       <div class="service">
         <i class="fa fa-compress service-icon"></i>
-        <div class="desc">
-            <h4>Physical Training</h4>
-            <p>Work With Educated Coaches To Develop Regiments That Meet Fitness Goals.</p>
+        <div class="panel-body">
+            <h4 class="text-align">Physical Training</h4>
+            <p class="lead">Work With Educated Coaches To Develop Regiments That Meet Fitness Goals.</p>
         </div>
     </div>
 </div>
 <div class="col-md-3">
   <div class="service">
     <i class="fa fa-cogs service-icon"></i>
-    <div class="desc">
+    <div class="panel-body">
         <h4>Wrestling</h4>
-        <p>Develop New And Perfect Existing Techniques, All While Under The Microscope Of Detail-Oriented Coaches.</p>
+        <p class="lead text-center">Develop New And Perfect Existing Techniques,<br> All While Under The Microscope Of Detail-Oriented Coaches.</p>
     </div>
 </div>
 </div>
 <div class="col-md-3">
   <div class="service">
     <i class="fa fa-rocket service-icon"></i>
-    <div class="desc">
+    <div class="panel-body">
         <h4>Weightlifting</h4>
-        <p>Increase Strength, Agility, Flexibility, And Stamina With Emphasis On Proper Form And Safety.</p>
+        <p class="lead">Increase Strength, Agility, Flexibility,<br> And Stamina With Emphasis On Proper Form And Safety.</p>
     </div>
 </div>
 </div>
 <div class="col-md-3">
   <div class="service">
     <i class="fa fa-heartbeat service-icon"></i>
-    <div class="desc">
-        <h4>Sports Psychology</h4>
-        <p>Build The Emotional And Mental Skills Needed To Work With Yourself To Overcome High Stress Situations. </p>
+    <div class="panel-body">
+        <h4 class="text-align">Sports Psychology</h4>
+        <p class="lead">Build The Emotional And Mental Skills <br> Needed To Work <br> With Yourself To Overcome High Stress Situations. </p>
     </div>
 </div>
 </div>
 </div>
 <!-- End Service Blokcs -->
 
-<!-- Recent Works -->
-<div class="headline"><h2>Recent Works</h2></div>
+<!-- Recent Blogs-->
+<div class="headline"><h2>Recent Blogs</h2></div>
 <div class="row margin-bottom-20">
+<% @blogged.each do |blog| %>
     <div class="col-md-3 col-sm-6">
         <div class="thumbnails thumbnail-style thumbnail-kenburn">
          <div class="thumbnail-img">
             <div class="overflow-hidden">
-                <img class="img-responsive" src="assets/img/main/img1.jpg" alt="">
+               <%= image_tag blog.photo_url.to_s,:class=>"img-responsive", :width => 844, :height => 562 %>
             </div>
-            <a class="btn-more hover-effect" href="#">read more +</a>
+            <%= link_to "read more +", blog_url(blog), :class=> "btn-more hover-effect"%>
         </div>
         <div class="caption">
-            <h3><a class="hover-effect" href="#">Project One</a></h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+            <h3><a class="hover-effect" href="#"><%= blog.title.titleize %></a></h3>
+            <p><%= truncate(blog.content, :length => 150) %></p>
         </div>
     </div>
 </div>
-<div class="col-md-3 col-sm-6">
-    <div class="thumbnails thumbnail-style thumbnail-kenburn">
-        <div class="thumbnail-img">
-            <div class="overflow-hidden">
-                <img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
-            </div>
-            <a class="btn-more hover-effect" href="#">read more +</a>
-        </div>
-        <div class="caption">
-            <h3><a class="hover-effect" href="#">Project Two</a></h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-        </div>
-    </div>
+<% end %>
 </div>
-<div class="col-md-3 col-sm-6">
-    <div class="thumbnails thumbnail-style thumbnail-kenburn">
-        <div class="thumbnail-img">
-            <div class="overflow-hidden">
-                <img class="img-responsive" src="assets/img/main/img3.jpg" alt="">
-            </div>
-            <a class="btn-more hover-effect" href="#">read more +</a>
-        </div>
-        <div class="caption">
-            <h3><a class="hover-effect" href="#">Project Three</a></h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-        </div>
-    </div>
-</div>
-<div class="col-md-3 col-sm-6">
-    <div class="thumbnails thumbnail-style thumbnail-kenburn">
-        <div class="thumbnail-img">
-            <div class="overflow-hidden">
-                <img class="img-responsive" src="assets/img/main/img17.jpg" alt="">
-            </div>
-            <a class="btn-more hover-effect" href="#">read more +</a>
-        </div>
-        <div class="caption">
-            <h3><a class="hover-effect" href="#">Project Four</a></h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-        </div>
-    </div>
-</div>
-</div>
-<!-- End Recent Works -->
+<!-- End Recent Blogs-->
 
 <!-- Info Blokcs -->
 <div class="row margin-bottom-30">
@@ -159,18 +119,18 @@
         <img class="img-responsive margin-bottom-20" src="assets/img/main/img18.jpg" alt="">
     </div>
     <div class="col-sm-8">
-        <p>People Who Join Our Program Are Looking To:</p>
+        <p class="lead">People Who Join Our Program Are Looking To:</p>
         <ul class="list-unstyled margin-bottom-20">
-            <li><i class="fa fa-check color-green"></i> Increase Competitive Edge</li>
-            <li><i class="fa fa-check color-green"></i> Increase Overall Athleticism</li>
-            <li><i class="fa fa-check color-green"></i> Increase Overall Fitness </li>
-            <li><i class="fa fa-check color-green"></i> Break Physical and Mental Boundaries</li>
+            <li class="lead"><i class="fa fa-check color-green"></i> Increase Competitive Edge</li>
+            <li class="lead"><i class="fa fa-check color-green"></i> Increase Overall Athleticism</li>
+            <li class="lead"><i class="fa fa-check color-green"></i> Increase Overall Fitness </li>
+            <li class="lead"><i class="fa fa-check color-green"></i> Break Physical and Mental Boundaries</li>
         </ul>
     </div>
 </div>
 
 <blockquote class="hero-unify">
-    <p>"My goal is to create programs where we can apply our skills and expertise effectively, so that our clients can development and improve the mental and physical skills necessary to compete and achieve success at higher levels."  </p>
+    <p class="lead">"My goal is to provide programs that apply our skills and expertise effectively, so that our clients can development and improve the mental and physical skills necessary to compete and achieve success at higher levels."  </p>
     <small>Co-Owner & Coach Mitch Policky</small>
 </blockquote>
 </div><!--/col-md-8-->

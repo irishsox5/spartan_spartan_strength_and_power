@@ -23,11 +23,11 @@
       </div>
       <div class="news-v3-in">
         <ul class="list-inline posted-info">
-          <li>By <%= @blog.author %></li>
-          <li><%= @blog.created_at.strftime("%B-%d-%Y") %></li>
+          <li class='lead'><%= @blog.author %></li> <li>/</li>
+          <li class='lead'><%= @blog.created_at.strftime("%B-%d-%Y") %></li>
         </ul>
         <h2><a href="#"><%= @blog.title %></a></h2>
-        <p><%= @blog.content %></p>
+        <p class="lead"><%= @blog.content %></p>
         <!-- <ul class="post-shares">
           <li>
             <a href="#">
