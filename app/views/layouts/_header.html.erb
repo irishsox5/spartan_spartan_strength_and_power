@@ -11,24 +11,11 @@
           <div class="topbar">
             <ul class="loginbar pull-right">
               <li class="hoverSelector">
-                <i class="fa fa-globe"></i>
-                <a>Languages</a>
-                <ul class="languages hoverSelectorBlock">
-                  <li class="active">
-                    <a href="#">English <i class="fa fa-check"></i></a>
-                  </li>
-                  <li><a href="#">Spanish</a></li>
-                  <li><a href="#">Russian</a></li>
-                  <li><a href="#">German</a></li>
-                </ul>
-              </li>
               <% if current_user.present? %>
-              <li class="topbar-devider"></li>
               <li><%= link_to "Edit Info", edit_user_registration_url%></li>
               <li class="topbar-devider"></li>
               <li><%= link_to "Log Out", destroy_user_session_url, method: :delete%></li>
               <% else %>
-              <li class="topbar-devider"></li>
               <li><%= link_to "Login", new_user_session_url%></li>
               <li class="topbar-devider"></li>
               <li><%= link_to "Register", new_user_registration_url %></li>
