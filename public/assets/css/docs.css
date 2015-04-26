@@ -1,4 +1,4 @@
-/*   
+/*
  * Template Name: Unify - Responsive Bootstrap Template
  * Description: Business, Corporate, Portfolio, E-commerce, Blog, and One Page Template.
  * Version: 1.7
@@ -16,7 +16,7 @@ body {
 
 a,
 li a,
-a:hover { 
+a:hover {
    color: #3498db;
 }
 
@@ -49,7 +49,7 @@ h3 .label {
   border-radius: 3px !important;
 }
 
-hr { 
+hr {
 	margin-top:0;
 }
 
@@ -62,7 +62,7 @@ a:hover {
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;  
+  transition: all 0.1s ease-in-out;
 }
 */
 
@@ -81,7 +81,7 @@ a:hover {
 }
 
 .margin-bottom-5  { margin-bottom:5px;}
-.margin-bottom-10 { margin-bottom:10px;} 
+.margin-bottom-10 { margin-bottom:10px;}
 .margin-bottom-15 { margin-bottom:15px;}
 .margin-bottom-20 { margin-bottom:20px;}
 .margin-bottom-25 { margin-bottom:25px;}
@@ -106,7 +106,7 @@ a:hover {
 
 /*aside*/
 .page-wrap {
-  position: relative;  
+  position: relative;
 }
 
 .aside {
@@ -176,7 +176,7 @@ a:hover {
 }
 .content h2 a:hover i.fa {
 	color: #fff;
-  background: #3498db; 
+  background: #3498db;
 }
 
 /*Changelog and Upgrade*/
@@ -199,7 +199,7 @@ a:hover {
 }
 
 .theme-colors li {
-  padding: 0; 
+  padding: 0;
   width: 130px;
   margin-bottom: 20px;
 }
@@ -319,7 +319,7 @@ a:hover {
 }
 .theme-colors li span.doc-teal {
   color: #fff;
-  background: #2cd5b6; 
+  background: #2cd5b6;
 }
 .theme-colors li span.doc-teal-h {
   color: #fff;
@@ -364,15 +364,15 @@ a:hover {
     margin: 0 -20px;
     padding: 20px;
 }
-.halfings-demo .white-content *, 
-.halfings-demo .white-content p, 
+.halfings-demo .white-content *,
+.halfings-demo .white-content p,
 .halfings-demo .white-content a {
     color: #FFFFFF;
 }
 .halfings-demo h2 {
     text-align: left;
 }
-.halfings-demo p, 
+.halfings-demo p,
 .halfings-demo a {
     display: inline-block;
     font-size: 14px;
@@ -381,7 +381,7 @@ a:hover {
     text-align: left;
     width: 175px;
 }
-.halfings-demo .halflings, 
+.halfings-demo .halflings,
 .halfings-demo .halflings-icon {
     margin: 0 5px 0 0;
 }
@@ -406,11 +406,11 @@ a:hover {
    font-family: "Open Sans";
 }
 
-.fa-icons li:hover { 
+.fa-icons li:hover {
    color: #72c02c;
 }
 
-.fa-icons li i { 
+.fa-icons li i {
    padding: 4px;
    min-width: 30px;
    font-size: 18px;
@@ -419,7 +419,7 @@ a:hover {
 }
 .fa-icons li:hover i {
    color: #fff;
-   background: #72c02c; 
+   background: #72c02c;
 }
 
 /*GLYPHICONS Icons
@@ -471,7 +471,7 @@ li [class*=" icon-"].icon-lg {
   }
 }
 
-@media (max-width: 600px) { 
+@media (max-width: 600px) {
 	.table th.hidden-sm,
 	.table td.hidden-sm {
 		display: none !important;
@@ -547,9 +547,9 @@ li [class*=" icon-"].icon-lg {
 
 /*Custom Editor Plugin
 ------------------------------------*/
-:not(pre) > code[class*="language-"], 
+:not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #333 !important; 
+  background: #333 !important;
 }
 
 /*Others
@@ -560,7 +560,7 @@ pre[class*="language-"] {
 }
 
 .img-bg-doc {
-  padding: 20px 0 !important; 
+  padding: 20px 0 !important;
   background: #eee !important;
 }
 

@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 # STATIC ROUTES==============================================
   get '/landing_page' => "static_pages#home", :as => "landing_page"
   get '/coaches' => "static_pages#about",:as => "about_us"
-  get '/facilities'=>"static_pages#facilities", :as =>"facilities"
+  # get '/facilities'=>"static_pages#facilities", :as =>"facilities"
   get '/faqs' => "static_pages#faqs", :as => 'faqs'
   match '/free_trial', to: 'contacts#new', via: 'get',:as => 'trials'
   resources "contacts", only: [:create]
