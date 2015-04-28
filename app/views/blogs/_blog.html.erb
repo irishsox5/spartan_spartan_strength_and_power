@@ -7,6 +7,7 @@
       <li><i class="fa fa-calendar"></i> <%= blog.created_at.strftime("%B %d, %Y") %></li>
       <li><i class="fa fa-pencil"></i> <%= blog.author %></li>
       <li><i class="fa fa-comments"></i> <%= link_to "Comments", blog_url(blog) %></li>
+      <li><i class="fa fa-eye"></i> <%= link_to "Views", blog_url(blog) %></li>
     </ul>
       <% if blog.tags.any? %>
     <ul class="list-unstyled list-inline blog-tags">

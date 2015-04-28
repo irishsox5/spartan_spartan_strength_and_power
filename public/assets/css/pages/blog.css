@@ -18,7 +18,7 @@
 	text-decoration: none;
 }
 
-.blog .blog-img { 
+.blog .blog-img {
 	margin: 20px 0;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .blog-post-tags li {
-	font-size: 12px;
+	font-size: 18px;
 }
 
 .blog-post-tags li i {
@@ -53,7 +53,7 @@
 
 .blog-post-tags ul.blog-tags a {
 	color: #555;
-	font-size: 11px;
+	font-size: 15px;
 	display: inline;
 	padding: 3px 7px;
 	margin-right: 2px;
@@ -87,7 +87,7 @@
 }
 
 .blog-item .media h4.media-heading span {
-	top: 3px; 
+	top: 3px;
 	right: 0;
 	color: #777;
 	font-size: 12px;
