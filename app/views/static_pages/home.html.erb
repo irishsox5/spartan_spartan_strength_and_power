@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-md-9 animated fadeInLeft">
                 <span>An Intensive Physical Training, Wrestling, and Weightlifting Program </span>
-                <p class="lead">Strength and conditioning company. Focused on improving athletic performance</p><p class="lead">using efficient, safe training techniques and proper programming.</p>
+                <p class="lead">Strength and conditioning company. Focused on improving athletic performance</p><p class="lead">using efficient; safe training techniques and proper programming.</p>
             </div>
             <div class="col-md-3 btn-buy animated fadeInRight">
                 <%= link_to programs_url, :class=> "btn-u btn-u-lg", id: "buy" do %>
@@ -50,7 +50,8 @@
  <div class="row margin-bottom-30">
      <div class="col-md-3">
       <div class="service">
-        <i class="fa fa-compress service-icon"></i>
+        <i class="fa fa-bullhorn service-icon"></i>
+       <!--  fa fa-compress -->
         <div class="panel-body">
             <h4 class="text-align">Physical Training</h4>
             <p class="lead">Work With Educated Coaches To Develop Regiments That Meet Fitness Goals.</p>
@@ -68,7 +69,8 @@
 </div>
 <div class="col-md-3">
   <div class="service">
-    <i class="fa fa-rocket service-icon"></i>
+    <i class="fa fa-tint service-icon"></i>
+    <!--  fa-anchor -->
     <div class="panel-body">
         <h4>Weightlifting</h4>
         <p class="lead">Increase Strength, Agility, Flexibility,<br> And Stamina With Emphasis On Proper Form And Safety.</p>
@@ -140,24 +142,22 @@
    <div class="headline"><h2>Latest Shots</h2></div>
    <div id="myCarousel" class="carousel slide carousel-v1">
     <div class="carousel-inner">
+    <% @gallerz.each do |gallery| %>
         <div class="item active">
-            <img src="assets/img/main/img4.jpg" alt="">
+        <%= image_tag gallery.image_url.to_s,:class=>"img-responsive" %>
             <div class="carousel-caption">
-                <p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
+                <p><%= gallery.title %></p>
             </div>
         </div>
+        <% end %>
+        <% @galleries.each do |gallery| %>
         <div class="item">
-            <iframe src="https://www.youtube.com/embed/UQfDk9zbLJo" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            <%= image_tag gallery.image_url.to_s,:class=>"img-responsive" %>
             <div class="carousel-caption">
-                <p>Cras justo odio, dapibus ac facilisis into egestas.</p>
+                <p><%= gallery.title %></p>
             </div>
         </div>
-        <div class="item">
-            <img src="assets/img/main/img24.jpg" alt="">
-            <div class="carousel-caption">
-                <p>Justo cras odio apibus ac afilisis lingestas de.</p>
-            </div>
-        </div>
+        <% end %>
     </div>
 
     <div class="carousel-arrow">
