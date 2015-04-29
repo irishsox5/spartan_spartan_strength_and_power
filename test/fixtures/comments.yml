@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  first_name: MyString
+  last_name: MyString
+  blog_id: 
   content: MyText
-  blog_id: 1
-  name: MyString
 
 two:
+  first_name: MyString
+  last_name: MyString
+  blog_id: 
   content: MyText
-  blog_id: 1
-  name: MyString

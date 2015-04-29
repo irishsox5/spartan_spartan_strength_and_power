@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429034422) do
+ActiveRecord::Schema.define(version: 20150429042439) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -25,11 +25,14 @@ ActiveRecord::Schema.define(version: 20150429034422) do
   create_table "comments", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.text     "content"
     t.integer  "blog_id"
+    t.integer  "user_id"
+    t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "comments", ["blog_id"], name: "index_comments_on_blog_id"
 
   create_table "event_series", force: :cascade do |t|
     t.integer  "frequency"

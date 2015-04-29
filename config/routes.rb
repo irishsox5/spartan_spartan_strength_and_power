@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   resources :galleries
 
-  resources :blogs
+  resources :blogs do
+   resources :comments, :only => [:create]
+ end
 
    devise_for :users, :controllers => { registrations: 'registrations' }
    devise_scope :user do

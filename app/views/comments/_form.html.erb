@@ -12,16 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
   </div>
   <div class="field">
     <%= f.label :blog_id %><br>
-    <%= f.number_field :blog_id %>
+    <%= f.text_field :blog_id %>
   </div>
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
   </div>
   <div class="actions">
     <%= f.submit %>

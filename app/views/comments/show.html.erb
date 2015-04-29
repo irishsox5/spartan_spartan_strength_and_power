@@ -10,14 +10,17 @@
         <div class="row">
           <div class="col-md-12">
             <dl class="dl-horizontal">
-              <dt>Content</dt>
-              <dd><%= @comment.content %></dd>
+              <dt>First name</dt>
+              <dd><%= @comment.first_name %></dd>
+
+              <dt>Last name</dt>
+              <dd><%= @comment.last_name %></dd>
 
               <dt>Blog</dt>
-              <dd><%= @comment.blog_id %></dd>
+              <dd><%= @comment.blog %></dd>
 
-              <dt>Name</dt>
-              <dd><%= @comment.name %></dd>
+              <dt>Content</dt>
+              <dd><%= @comment.content %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
