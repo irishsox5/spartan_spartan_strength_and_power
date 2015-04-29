@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429042439) do
+ActiveRecord::Schema.define(version: 20150429161420) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(version: 20150429042439) do
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "blog_id"
-    t.integer  "user_id"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   add_index "comments", ["blog_id"], name: "index_comments_on_blog_id"
@@ -111,6 +111,14 @@ ActiveRecord::Schema.define(version: 20150429042439) do
   add_index "impressions", ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index"
   add_index "impressions", ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
   add_index "impressions", ["user_id"], name: "index_impressions_on_user_id"
+
+  create_table "memberships", force: :cascade do |t|
+    t.integer  "program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "memberships", ["program_id"], name: "index_memberships_on_program_id"
 
   create_table "programs", force: :cascade do |t|
     t.string   "name"

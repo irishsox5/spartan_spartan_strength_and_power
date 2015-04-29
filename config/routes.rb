@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   resources :comments
 
-  resources :programs, except: [:show]
+  resources :programs, except: [:show] do
+          resources :memberships, only: [:new, :create]
+  end
 
   resources :events
 

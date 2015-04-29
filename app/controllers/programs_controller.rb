@@ -5,6 +5,7 @@ class ProgramsController < ApplicationController
   # GET /programs.json
   def index
     @programs = Program.all
+    @program = Program.find_by(id: params[:id])
   end
 
   # GET /programs/1
