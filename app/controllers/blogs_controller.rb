@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_action :authenticate, :except => [ :index, :show ]
+   impressionist :actions=>[:show]
 
   # GET /blogs
   # GET /blogs.json
