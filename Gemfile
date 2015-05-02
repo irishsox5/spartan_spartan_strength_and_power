@@ -30,7 +30,7 @@ gem 'momentjs-rails'
 
 gem 'impressionist'
 
-gem 'stripe'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem "figaro"
 
 

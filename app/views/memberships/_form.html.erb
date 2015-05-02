@@ -3,42 +3,14 @@
 </blockquote>
 
 
-<%= form_for [@program, @membership] do |f| %>
-<!-- <#%= f.hidden_field :stripe_card_token %> -->
-<%= f.hidden_field :program_id %>
+<form action="/charges" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key=""
+    data-image="/assets/img/logo2-default.png"
+    data-name="Spartan Strength And Power"
+    data-description="<%= @program.name %>"
+    data-amount="<%= @program.price*100%> ">
+  </script>
+</form>
 
-<!-- <#% if @membership.stripe_card_token.present? %>
-  Credit card has been provided. -->
-<!-- <#% else %> -->
-  <div class="field">
-    <%= label_tag :name, "Name on Card" %>
-    <%= text_field_tag :name, nil, name: nil, class: "form-control"  %>
-  </div>
-
-  <div class="field">
-    <%= label_tag :card_number, "Credit Card Number" %>
-    <%= text_field_tag :card_number, nil, name: nil, class: "form-control"  %>
-  </div>
-  <div class="field">
-    <%= label_tag :card_code, "Security Code on Card (CVV)" %>
-    <%= text_field_tag :card_code, nil, name: nil, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= label_tag :card_month, "Card Expiration" %>
-    <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
-    <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
-  </div>
-<!-- <#% end %> -->
-<div id="stripe_error">
-  <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
-</div>
-<%= f.submit "Pay & Join!!" %>
-<% end %>
-<%#= @program.price %>
-
-
-  <!-- <div class="field">
-    <%#= f.label :program_id %><br>
-    <%#= f.text_field :program_id %>
-  </div>
- -->
