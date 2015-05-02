@@ -29,7 +29,7 @@ class ProgramsController < ApplicationController
 
     respond_to do |format|
       if @program.save
-        format.html { redirect_to @program, notice: 'Program was successfully created.' }
+        format.html { redirect_to programs_url, notice: 'Program was successfully created.' }
         format.json { render :show, status: :created, location: @program }
       else
         format.html { render :new }
