@@ -25,19 +25,29 @@ class MembershipsController < ApplicationController
   # POST /memberships
   # POST /memberships.json
   def create
-    # @programs = Program.find(params[:membership][:program_id])
-    @membership = Membership.new(membership_params)
+    Stripe.api_key = "sk_test_GZS2GvwSnXvG3wSPaoBXPESD"
 
-    respond_to do |format|
-      if @membership.save
-        format.html { redirect_to @membership, notice: 'Membership was successfully created.' }
-        format.json { render :show, status: :created, location: @membership }
-      else
-        format.html { render :new }
-        format.json { render json: @membership.errors, status: :unprocessable_entity }
-      end
-    end
+  # Amount in cents
+  @amount = Program.find(params[:program_id]).price*100
+
+  if (Program.find(params[:program_id]).price*100) < 50000
+    customer = Stripe::Customer.create(
+      :email => 'example@stripe.com',
+      :card  => params[:stripeToken]
+      )
+  else
+    charge = Stripe::Charge.create(
+    :amount => @amount, # amount in cents, again
+    :currency => "usd",
+    :source => params[:stripeToken],
+    :description => "(Program.find(params[:program_id]).name) Membership"
+    )
   end
+
+rescue Stripe::CardError => e
+  flash[:error] = e.message
+  redirect_to new_program_membership_path
+end
 
   # PATCH/PUT /memberships/1
   # PATCH/PUT /memberships/1.json

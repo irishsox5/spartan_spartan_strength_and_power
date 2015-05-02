@@ -60,7 +60,7 @@
                     <li><span class="icon-wrench"></span> Customisable Toolbar</li>
                 </ul>
                 <% if current_user.present? %>
-                <%= link_to "Purchase Now", new_program_membership_url(Program.find_by(id: 3)), class: "btn-u btn-brd btn-u pulse-grow" %>
+                <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 3)), class: "btn-u btn-brd btn-u pulse-grow" %>
                 <%end %>
             </div>
             <% end %>
@@ -82,7 +82,7 @@
                 <li><span class="icon-wrench"></span> Customisable Toolbar</li>
             </ul>
             <% if current_user.present? %>
-            <%= link_to "Purchase Now", new_program_membership_url(Program.find_by(id: 4)), class: "btn-u btn-brd btn-u pulse-grow" %>
+            <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 4)), class: "btn-u btn-brd btn-u pulse-grow" %>
             <% end %>
         </div>
         <% end %>
@@ -103,7 +103,7 @@
                 <span><i class="dollar">$</i><%= Program.find_by(id: 6).price %><i>Per/Month</i></span>
                 <p><%= truncate(Program.find_by(id: 6).description, :length => 72) %></p>
                 <% if current_user.present? %>
-                <%= link_to "Purchase Now", new_program_membership_url(Program.find_by(id: 6)), class: "btn-u btn-brd btn-u pulse-grow" %>
+                <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 6)), class: "btn-u btn-brd btn-u pulse-grow" %>
                 <% end %>
             </div>
             <div class="row pricing-body no-space-pricing no-row-space text-center">

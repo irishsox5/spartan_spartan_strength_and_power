@@ -3,10 +3,10 @@
 </blockquote>
 
 
-<form action="/charges" method="POST">
+<form action="<%= program_memberships_path %>" method="POST" class="text-center">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key=""
+    data-key="pk_test_NF4qazGnoW4Z8FLm2HMhDCrQ"
     data-image="/assets/img/logo2-default.png"
     data-name="Spartan Strength And Power"
     data-description="<%= @program.name %>"
