@@ -17,7 +17,7 @@ gem 'jquery-turbolinks'
 gem 'mail_form'
 
 gem 'carrierwave'
-gem "rmagick", :require => 'RMagick'
+gem "rmagick", :require => 'rmagick'
 
 gem 'kaminari'
 
