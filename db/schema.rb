@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 20150502204043) do
     t.datetime "updated_at"
   end
 
-
   create_table "galleries", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
