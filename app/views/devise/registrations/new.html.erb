@@ -34,14 +34,14 @@
           <div class="col-sm-6">
             <label>Password <span class="color-red">*</span></label>
             <% if @validatable %>
-            <br>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <em>(<%= @minimum_password_length %> characters min)</em>
            <% end %>
             <%= f.password_field :password, autocomplete: "off", :class=> "form-control margin-bottom-20" %>
           </div>
 
           <div class="col-sm-6">
             <label>Confirm Password <span class="color-red">*</span></label>
+
             <%= f.password_field :password_confirmation, autocomplete: "off",:class=> "form-control margin-bottom-20" %>
           </div>
         </div>
