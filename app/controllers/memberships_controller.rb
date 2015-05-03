@@ -37,6 +37,7 @@ class MembershipsController < ApplicationController
       :card  => params[:stripeToken]
       )
 
+      redirect_to :back
   else
     charge = Stripe::Charge.create(
     :amount => @amount, # amount in cents, again
@@ -44,7 +45,7 @@ class MembershipsController < ApplicationController
     :source => params[:stripeToken],
     :description => @program.name
     )
-
+    redirect_to :back
   end
 
 rescue Stripe::CardError => e
