@@ -7,8 +7,6 @@ Rails.application.routes.draw do
     resources :memberships, only: [:new, :create]
   end
 
-  resources :events
-
   resources :galleries
 
   resources :blogs do

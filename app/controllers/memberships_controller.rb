@@ -1,6 +1,5 @@
 class MembershipsController < ApplicationController
   before_action :set_membership, only: [:show, :edit, :update, :destroy]
-
   # GET /memberships
   # GET /memberships.json
   def index
@@ -25,29 +24,34 @@ class MembershipsController < ApplicationController
   # POST /memberships
   # POST /memberships.json
   def create
-    Stripe.api_key = "sk_test_GZS2GvwSnXvG3wSPaoBXPESD"
+    Stripe.api_key = ENV['stripe_api_key']
 
   # Amount in cents
   @amount = Program.find(params[:program_id]).price*100
+  @program = Program.find(params[:program_id])
 
   if (Program.find(params[:program_id]).price*100) < 50000
     customer = Stripe::Customer.create(
-      :email => 'example@stripe.com',
+      :email => params[:stripeEmail],
+      :description => @program.name,
       :card  => params[:stripeToken]
       )
+
   else
     charge = Stripe::Charge.create(
     :amount => @amount, # amount in cents, again
     :currency => "usd",
     :source => params[:stripeToken],
-    :description => "(Program.find(params[:program_id]).name) Membership"
+    :description => @program.name
     )
+
   end
 
 rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to new_program_membership_path
 end
+
 
   # PATCH/PUT /memberships/1
   # PATCH/PUT /memberships/1.json

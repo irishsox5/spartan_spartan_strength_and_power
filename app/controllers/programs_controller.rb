@@ -75,7 +75,7 @@ class ProgramsController < ApplicationController
 
     def authenticate
       authenticate_or_request_with_http_basic do |name, password|
-        name == "admin" && password == "secret"
+        name == "spartanstrengthandpower" && password == "STorm0608@#123"
       end
     end
   end

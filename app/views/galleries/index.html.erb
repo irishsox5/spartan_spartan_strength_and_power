@@ -1,7 +1,7 @@
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs">
   <div class="container">
-    <h1 class="pull-left">Spartan Program Gallery <% if current_user.present? %> <%= link_to icon('plus'), new_gallery_url, class: "btn btn-lg btn-success"  %> <% end %></h1>
+    <h1 class="pull-left">Spartan Program Gallery <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %> <%= link_to icon('plus'), new_gallery_url, class: "btn btn-lg btn-success"  %> <% end %></h1>
   </div>
 </div><!--/breadcrumbs-->
 <!--=== End Breadcrumbs ===-->

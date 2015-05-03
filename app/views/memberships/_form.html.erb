@@ -6,7 +6,7 @@
 <form action="<%= program_memberships_path %>" method="POST" class="text-center">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_NF4qazGnoW4Z8FLm2HMhDCrQ"
+    data-key="<%= ENV['stripe_publishable_key']%>"
     data-image="/assets/img/logo2-default.png"
     data-name="Spartan Strength And Power"
     data-description="<%= @program.name %>"
@@ -14,3 +14,6 @@
   </script>
 </form>
 
+<script>
+$( document ).ready
+</script>
