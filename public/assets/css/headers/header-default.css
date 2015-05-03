@@ -135,7 +135,7 @@
 /*Header Container*/
 .header > .container {
 	display: table;
-	margin-bottom: -20px;
+	margin-bottom: -10px;
 }
 
 @media (max-width: 768px) {
