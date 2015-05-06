@@ -16,7 +16,7 @@
                     <li><span class="icon-wrench"></span> Customisable Toolbar</li> -->
                 </ul>
                 <% if current_user.present? %>
-                <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 1)), class: "btn-u btn-brd btn-u pulse-grow" %>
+                <%= link_to "Join Now!", new_program_membership_url(Program.find_by(id: 1)), class: "btn-u btn-brd btn-u pulse-grow " %>
                 <%end %>
             </div>
             <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
@@ -47,7 +47,7 @@
                     <li><span class="icon-wrench"></span> Customisable Toolbar</li> -->
                 </ul>
                 <% if current_user.present? %>
-                <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 2)), class: "btn-u btn-brd btn-u pulse-grow" %>
+                <%= link_to "Join Now!", new_program_membership_url(Program.find_by(id: 2)), class: "btn-u btn-brd btn-u pulse-grow" %>
                 <% end %>
             </div>
             <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
@@ -78,7 +78,7 @@
                     <li><span class="icon-wrench"></span> Customisable Toolbar</li> -->
                 </ul>
                 <% if current_user.present? %>
-                <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 3)), class: "btn-u btn-brd btn-u pulse-grow" %>
+                <%= link_to "Join Now!", new_program_membership_url(Program.find_by(id: 3)), class: "btn-u btn-brd btn-u pulse-grow" %>
                 <%end %>
             </div>
             <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
@@ -109,7 +109,7 @@
                 <li><span class="icon-wrench"></span> Customisable Toolbar</li -->
             </ul>
             <% if current_user.present? %>
-            <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 4)), class: "btn-u btn-brd btn-u pulse-grow" %>
+            <%= link_to "Join Now!", new_program_membership_url(Program.find_by(id: 4)), class: "btn-u btn-brd btn-u pulse-grow" %>
             <% end %>
         </div>
         <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
@@ -139,7 +139,7 @@
                 <span><i class="dollar">$</i><%= Program.find_by(id: 6).price %><i>Per/Month</i></span>
                 <p><%= truncate(Program.find_by(id: 6).description, :length => 72) %></p>
                 <% if current_user.present? %>
-                <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 6)), class: "btn-u btn-brd btn-u pulse-grow" %>
+                <%= link_to "Join Now!", new_program_membership_url(Program.find_by(id: 6)), class: "btn-u btn-brd btn-u pulse-grow" %>
                 <% end %>
             </div>
           <!--   <div class="row pricing-body no-space-pricing no-row-space text-center">
@@ -200,7 +200,7 @@
                 <span><i class="dollar">$</i><%= Program.find_by(id: 5).price %><i>Per/Month</i></span>
                 <p><%= truncate(Program.find_by(id: 5).description, :length => 72) %></p>
                  <% if current_user.present? %>
-                <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 5)), class: "btn-u btn-brd btn-u pulse-grow" %>
+                <%= link_to "Join Now!", new_program_membership_url(Program.find_by(id: 5)), class: "btn-u btn-brd btn-u pulse-grow" %>
                 <% end %>
             </div>
            <!--  <div class="row pricing-body no-space-pricing no-row-space text-center">
@@ -261,7 +261,7 @@
                 <span><i class="dollar">$</i><%= Program.find_by(id: 7).price %><i>Per/Month</i></span>
                 <p><%= truncate(Program.find_by(id: 7).description, :length => 72) %></p>
                 <% if current_user.present? %>
-                <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 7)), class: "btn-u btn-brd btn-u pulse-grow" %>
+                <%= link_to "Join Now!", new_program_membership_url(Program.find_by(id: 7)), class: "btn-u btn-brd btn-u pulse-grow" %>
                <% end %>
             </div>
             <!-- <div class="row pricing-body no-space-pricing no-row-space text-center">
