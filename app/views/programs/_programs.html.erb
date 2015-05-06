@@ -19,7 +19,16 @@
                 <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 1)), class: "btn-u btn-brd btn-u pulse-grow" %>
                 <%end %>
             </div>
-            <% end %>
+            <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
+            <div class="btn-group btn-group-justified">
+
+
+        <%= link_to icon('edit'), edit_program_path(id:1), class: "btn btn-warning" %>
+
+
+        </div>
+        <% end %>
+        <% end %>
         </div>
     </div>
     <div class="col-md-3 col-sm-6 col-xs-6 col-width-full wow flip">
@@ -41,6 +50,15 @@
                 <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 2)), class: "btn-u btn-brd btn-u pulse-grow" %>
                 <% end %>
             </div>
+            <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
+        <div class="btn-group btn-group-justified">
+
+
+        <%= link_to icon('edit'), edit_program_path(id:2), class: "btn btn-warning" %>
+
+
+        </div>
+        <% end %>
         <% end %>
         </div>
     </div>
@@ -63,6 +81,15 @@
                 <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 3)), class: "btn-u btn-brd btn-u pulse-grow" %>
                 <%end %>
             </div>
+            <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
+              <div class="btn-group btn-group-justified">
+
+
+        <%= link_to icon('edit'), edit_program_path(id:3), class: "btn btn-warning" %>
+
+
+        </div>
+        <% end %>
             <% end %>
         </div>
     </div>
@@ -85,6 +112,15 @@
             <%= link_to "Purchase Membership", new_program_membership_url(Program.find_by(id: 4)), class: "btn-u btn-brd btn-u pulse-grow" %>
             <% end %>
         </div>
+        <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
+          <div class="btn-group btn-group-justified">
+
+
+        <%= link_to icon('edit'), edit_program_path(id:4), class: "btn btn-warning" %>
+
+
+        </div>
+        <% end %>
         <% end %>
     </div>
 </div>
@@ -145,6 +181,15 @@
                 </div>
             </div> -->
         </div>
+        <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
+          <div class="btn-group btn-group-justified">
+
+
+        <%= link_to icon('edit'), edit_program_path(id:6), class: "btn btn-warning" %>
+
+
+        </div>
+    <% end %>
      <% end %>
     </div>
     <div class="col-md-4 col-sm-6 wow fadeInUp">
@@ -197,6 +242,15 @@
                 </div>
             </div> -->
         </div>
+        <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
+          <div class="btn-group btn-group-justified">
+
+
+        <%= link_to icon('edit'), edit_program_path(id:5), class: "btn btn-warning" %>
+
+
+        </div>
+        <% end %>
         <% end %>
     </div>
     <div class="col-md-4 col-sm-6 wow rotateInUpRight">
@@ -249,10 +303,19 @@
                 </div>
             </div> -->
         </div>
+         <% if current_user.present? && current_user.email == "spartanstrengthandpower@gmail.com" %>
+          <div class="btn-group btn-group-justified">
+
+
+        <%= link_to icon('edit'), edit_program_path(id:7), class: "btn btn-warning" %>
+
+
+        </div>
+        <% end %>
     <% end %>
     </div>
 </div>
-        <!-- End Pricing Table-v8 -->
+ <!-- End Pricing Table-v8 -->
 
 
 <script type="text/javascript">
